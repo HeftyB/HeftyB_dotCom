@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+body .skill-t {
+    width: 200px;
+}
+
+body .skill-i {
+    width: 50px;
+}
+
+#ddpic {
+    width: 32px;
+}
+
+.blogTile1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.blogTile2 {
+    grid-column: span 2;
+    /*grid-row: span 4;*/
+}
+
+.blogTile3 {
+    grid-row: span 2;
+}
+
+.blogTile4 {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.blogTile5 {
+    grid-column: span 2;
+}
+
+.blogTile6 {
+    grid-row: span 2;
+}
+
+.blogTile7 {
+    grid-row: span 2;
+}
+
+.blogTile8 {
+    grid-row: span 2;
+}
+
+.blogTile9 {
+    grid-row: span 2;
+}
+
+.blogTile10 {
+    grid-row: span 2;
+}
+
