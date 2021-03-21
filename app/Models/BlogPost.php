@@ -14,4 +14,14 @@ class BlogPost extends Model
         'user_id',
         'img',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function blogElements()
+    {
+        return $this->hasMany(BlogElement::class);
+    }
 }

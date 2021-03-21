@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::post("/blog/create", function (Request $request) {
+//    return response()->json($request);
+//});
+
+Route::middleware('auth:api')->post("/blog/create", [AuthController::class, "createBlogPost"]);
+
+Route::middleware('auth:api')->post("/upload", [AuthController::class, "uploadImg"]);
+
+Route::middleware('auth:api')->post("/upload_url", [AuthController::class, "uploadURL"]);

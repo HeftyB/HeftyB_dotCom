@@ -16,8 +16,8 @@ class CreateElementsTable extends Migration
         Schema::create('elements', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->string("open_tag");
-            $table->string("close_tag");
+            $table->string("tag");
+//            $table->string("close_tag");
             $table->timestamps();
         });
     }

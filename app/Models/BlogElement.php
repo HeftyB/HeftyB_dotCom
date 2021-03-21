@@ -15,4 +15,14 @@ class BlogElement extends Model
         'element_id',
         'blog_post_id'
     ];
+
+    public function blogPost()
+    {
+        return $this->belongsTo(BlogPost::class);
+    }
+
+    public function element()
+    {
+        return $this->hasOne(Element::class);
+    }
 }

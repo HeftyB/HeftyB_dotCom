@@ -14,4 +14,5 @@ class Element extends Model
         'open_tag',
         'close_tag',
     ];
+
 }

@@ -20,7 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         "google_id",
-        "avatar"
+        "avatar",
+        "api_token"
 //        'password',
     ];
 
@@ -42,4 +43,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function blogPosts()
+    {
+        return $this->hasMany(BlogPost::class);
+    }
+
+    public function userFiles()
+    {
+        return $this->hasMany(UserFile::class);
+    }
 }

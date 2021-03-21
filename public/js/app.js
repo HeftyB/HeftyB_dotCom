@@ -144,6 +144,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editorjs_marker__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_editorjs_marker__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var editorjs_undo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! editorjs-undo */ "./node_modules/editorjs-undo/dist/bundle.js");
 /* harmony import */ var editorjs_undo__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(editorjs_undo__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var editorjs_paragraph_with_alignment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! editorjs-paragraph-with-alignment */ "./node_modules/editorjs-paragraph-with-alignment/dist/bundle.js");
+/* harmony import */ var editorjs_paragraph_with_alignment__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(editorjs_paragraph_with_alignment__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var editorjs_inline_font_size_tool__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! editorjs-inline-font-size-tool */ "./node_modules/editorjs-inline-font-size-tool/dist/bundle.js");
+/* harmony import */ var editorjs_inline_font_size_tool__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(editorjs_inline_font_size_tool__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -152,29 +156,75 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-console.log("Hello!");
+
+
+var token = window.localStorage.getItem("api_token");
+var saveButton = document.getElementById('saveButton');
 var editor = new (_editorjs_editorjs__WEBPACK_IMPORTED_MODULE_0___default())({
-  /**
-   * Id of Element that should contain the Editor
-   */
   holder: 'editorjs',
-
-  /**
-   * Available Tools list.
-   * Pass Tool's class or Settings object for each Tool you want to use
-   */
   tools: {
     header: (_editorjs_header__WEBPACK_IMPORTED_MODULE_1___default()),
     list: (_editorjs_list__WEBPACK_IMPORTED_MODULE_3___default()),
-    quote: (_editorjs_quote__WEBPACK_IMPORTED_MODULE_2___default()),
+    // quote: Quote,
+    fontSize: (editorjs_inline_font_size_tool__WEBPACK_IMPORTED_MODULE_9___default()),
+    paragraph: {
+      "class": (editorjs_paragraph_with_alignment__WEBPACK_IMPORTED_MODULE_8___default()),
+      inlineToolbar: true
+    },
     image: {
       "class": (_editorjs_image__WEBPACK_IMPORTED_MODULE_4___default()),
       config: {
+        actions: [{
+          name: "resize",
+          icon: "<svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" + "\t viewBox=\"0 0 317.215 317.215\" style=\"enable-background:new 0 0 317.215 317.215;\" xml:space=\"preserve\">\n" + "<g>\n" + "\t<path style=\"fill:#231F20;\" d=\"M309.715,1.107h-71.223c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h18.973\n" + "\t\tl-57.129,57.127c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.197,5.303l14.143,14.143\n" + "\t\tc1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.733,5.304-2.197l57.129-57.127V79.83c0,4.142,3.357,7.5,7.5,7.5h20\n" + "\t\tc4.143,0,7.5-3.358,7.5-7.5V8.607C317.215,4.465,313.857,1.107,309.715,1.107z\"/>\n" + "\t<path style=\"fill:#231F20;\" d=\"M59.75,36.107h18.973c4.143,0,7.5-3.358,7.5-7.5v-20c0-4.142-3.357-7.5-7.5-7.5H7.5\n" + "\t\tc-4.143,0-7.5,3.358-7.5,7.5V79.83c0,4.142,3.357,7.5,7.5,7.5h20c4.143,0,7.5-3.358,7.5-7.5V60.857l57.125,57.126\n" + "\t\tc1.465,1.464,3.385,2.197,5.305,2.197c1.919,0,3.839-0.733,5.305-2.197l14.142-14.143c1.406-1.406,2.196-3.314,2.196-5.303\n" + "\t\tc0-1.989-0.79-3.897-2.196-5.303L59.75,36.107z\"/>\n" + "\t<path style=\"fill:#231F20;\" d=\"M102.734,199.233c-2.93-2.929-7.678-2.929-10.609,0L35,256.358v-18.974c0-4.142-3.357-7.5-7.5-7.5\n" + "\t\th-20c-4.143,0-7.5,3.358-7.5,7.5v71.223c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-20\n" + "\t\tc0-4.142-3.357-7.5-7.5-7.5H59.75l57.126-57.125c1.406-1.406,2.196-3.314,2.196-5.303c0-1.989-0.79-3.897-2.196-5.303\n" + "\t\tL102.734,199.233z\"/>\n" + "\t<path style=\"fill:#231F20;\" d=\"M309.715,229.885h-20c-4.143,0-7.5,3.358-7.5,7.5v18.976l-57.13-57.127\n" + "\t\tc-2.929-2.929-7.677-2.929-10.606,0l-14.143,14.143c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.198,5.303\n" + "\t\tl57.128,57.125h-18.973c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-71.223\n" + "\t\tC317.215,233.243,313.857,229.885,309.715,229.885z\"/>\n" + // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          // "<g>\n" +
+          // "</g>\n" +
+          "</svg>",
+          title: "Resize Image",
+          action: function action(name) {
+            // alert(`${name} button clicked`);
+            // $(this).addClass("ui-widget-content");
+            $(".image-tool").resizable();
+            $(".image-tool").draggable();
+            return true;
+          }
+        }],
         endpoints: {
-          byFile: 'http://localhost:8008/uploadFile',
+          byFile: '/api/upload',
           // Your backend file uploader endpoint
-          byUrl: 'http://localhost:8008/fetchUrl' // Your endpoint that provides uploading by Url
+          byUrl: '/api/upload_url' // Your endpoint that provides uploading by Url
 
+        },
+        additionalRequestHeaders: {
+          "Authorization": "Bearer ".concat(token)
         }
       }
     },
@@ -191,6 +241,211 @@ var editor = new (_editorjs_editorjs__WEBPACK_IMPORTED_MODULE_0___default())({
       editor: editor
     });
   }
+});
+saveButton.addEventListener("click", function () {
+  editor.save().then(function (savedData) {
+    $.ajax({
+      type: "POST",
+      url: "/api/blog/create",
+      headers: {
+        "Authorization": "Bearer ".concat(token)
+      },
+      data: JSON.stringify({
+        title: $("#blogTitle").text(),
+        data: savedData
+      }),
+      contentType: "application/json",
+      success: function success(data) {
+        console.log(data);
+      }
+    });
+  })["catch"](function (error) {
+    console.error("Saving error", error);
+  });
+});
+$("#thirds").resizable();
+
+/***/ }),
+
+/***/ "./node_modules/editorjs-inline-font-size-tool/dist/bundle.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/editorjs-inline-font-size-tool/dist/bundle.js ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+!function(t,e){ true?module.exports=e():0}(window,(function(){return function(t){var e={};function n(o){if(e[o])return e[o].exports;var i=e[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}return n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)n.d(o,i,function(e){return t[e]}.bind(null,i));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=0)}([function(t,e,n){function o(t){return function(t){if(Array.isArray(t))return i(t)}(t)||function(t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(t))return Array.from(t)}(t)||function(t,e){if(!t)return;if("string"==typeof t)return i(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return i(t,e)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function i(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,o=new Array(e);n<e;n++)o[n]=t[n];return o}function r(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function s(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}n(1).toString();var a=function(){function t(){var e=this;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),s(this,"isDropDownOpen",!1),s(this,"togglingCallback",null),s(this,"emptyString","&nbsp;&nbsp"),s(this,"fontSizeDropDown","font-size-dropdown"),s(this,"commandName","fontSize"),s(this,"CSS",{button:"ce-inline-tool",buttonActive:"ce-font-size-tool--active",buttonModifier:"ce-inline-tool--font"}),s(this,"nodes",{button:void 0}),s(this,"selectedFontSize",null),s(this,"selectionList",void 0),s(this,"buttonWrapperText",void 0),s(this,"createSvg",void 0),s(this,"toggleFontSizeSelector",(function(t){e.selectedFontSize=t.target.id,e.toggle()})),s(this,"toggleDropDown",(function(t){t.target.id!==e.fontSizeDropDown&&"fontSizeBtn"!==t.target.parentNode.id&&"fontSizeBtn"!==t.target.id||e.toggle((function(t){t&&(e.isDropDownOpen=!0)}))}))}var e,n,i;return e=t,i=[{key:"sanitize",get:function(){return{font:{size:!0,face:!0}}}},{key:"isInline",get:function(){return!0}}],(n=[{key:"make",value:function(t){var e,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,i=document.createElement(t);return Array.isArray(n)?(e=i.classList).add.apply(e,o(n)):n&&i.classList.add(n),i}},{key:"createButton",value:function(){this.nodes.button=this.make("button",[this.CSS.button,this.CSS.buttonModifier]),this.nodes.button.type="button",this.nodes.button.setAttribute("id","fontSizeBtn"),this.getFontSizeForButton(),this.createSvg=this.svg("toggler-down",13,13),this.nodes.button.appendChild(this.createSvg)}},{key:"getFontSizeForButton",value:function(){this.buttonWrapperText=this.make("div","button-wrapper-text");var t=this.make("div");t.setAttribute("id",this.fontSizeDropDown),t.innerHTML=this.emptyString,this.buttonWrapperText.append(t),this.nodes.button.append(this.buttonWrapperText)}},{key:"addFontSizeOptions",value:function(){var t=this;this.selectionList=this.make("div","selectionList");for(var e=this.make("div","selection-list-wrapper"),n=0,o=[{label:"10",value:"1"},{label:"13",value:"2"},{label:"16",value:"3"},{label:"18",value:"4"},{label:"24",value:"5"},{label:"32",value:"6"},{label:"48",value:"7"}];n<o.length;n++){var i=o[n],r=this.make("div");r.setAttribute("value",i.value),r.setAttribute("id",i.value),r.classList.add("selection-list-option"),document.getElementById(this.fontSizeDropDown).innerHTML!==i.label&&this.selectedFontSize!==i.value||r.classList.add("selection-list-option-active"),r.innerHTML=i.label,e.append(r)}this.selectionList.append(e),this.nodes.button.append(this.selectionList),this.selectionList.addEventListener("click",this.toggleFontSizeSelector),setTimeout((function(){"function"==typeof t.togglingCallback&&t.togglingCallback(!0)}),50)}},{key:"removeFontSizeOptions",value:function(){this.selectionList&&(this.isDropDownOpen=!1,this.selectionList=this.selectionList.remove()),"function"==typeof this.togglingCallback&&this.togglingCallback(!1)}},{key:"render",value:function(){return this.createButton(),this.nodes.button.addEventListener("click",this.toggleDropDown),this.nodes.button}},{key:"toggle",value:function(t){!this.isDropDownOpen&&t?this.addFontSizeOptions():this.removeFontSizeOptions(),"function"==typeof t&&(this.togglingCallback=t)}},{key:"surround",value:function(t){this.selectedFontSize&&document.execCommand("fontSize",!1,this.selectedFontSize)}},{key:"getComputedFontStyle",value:function(t){return window.getComputedStyle(t.parentElement,null).getPropertyValue("font-size")}},{key:"checkState",value:function(t){var e=document.queryCommandState("fontSize"),n=this.getComputedFontStyle(t.anchorNode);if(n===this.getComputedFontStyle(t.focusNode))-1!==(n=n.slice(0,n.indexOf("p"))).indexOf(".")&&(n=n.slice(0,n.indexOf("."))),this.replaceFontSizeInWrapper(n);else{var o=this.emptyString;this.replaceFontSizeInWrapper(o)}return e}},{key:"replaceFontSizeInWrapper",value:function(t){document.getElementById(this.fontSizeDropDown).innerHTML=t}},{key:"clear",value:function(){this.toggle(),this.selectedFontSize=null}},{key:"svg",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:14,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:14,o=document.createElementNS("http://www.w3.org/2000/svg","svg");return o.classList.add("icon","icon--"+t),o.setAttribute("width",e+"px"),o.setAttribute("height",n+"px"),o.innerHTML='<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#'.concat(t,'"></use>'),o}}])&&r(e.prototype,n),i&&r(e,i),t}();s(a,"title","Font Size"),t.exports=a},function(t,e,n){var o=n(2);"string"==typeof o&&(o=[[t.i,o,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(4)(o,i);o.locals&&(t.exports=o.locals)},function(t,e,n){(t.exports=n(3)(!1)).push([t.i,".ce-inline-tool.ce-inline-tool--font {\n        display: flex;\n        flex-direction: row;\n        position: relative;\n    }\n    .ce-inline-tool .button-wrapper-text {\n        width: 30px;\n    }\n    .ce-inline-tool .selectionList {\n        position: absolute;\n        top: 35px;\n        left: 0; \n    }\n    .ce-inline-tool .selectionList .selection-list-wrapper {\n            width: 50px;\n            background: #fff;\n            border: 1px solid #eaeaea;\n        }\n    .ce-inline-tool .selectionList .selection-list-wrapper .selection-list-option {\n                padding-top: 5px;\n                padding-bottom: 5px;\n                border-bottom: 1px solid #eaeaea;\n            }\n    .ce-inline-tool .selectionList .selection-list-wrapper .selection-list-option-active {\n                  background-color: #eff2f5;\n                }\n    .ce-inline-tool .selectionList .selection-list-wrapper .selection-list-option:hover {\n                background-color: #eff2f5;\n            }\n",""])},function(t,e){t.exports=function(t){var e=[];return e.toString=function(){return this.map((function(e){var n=function(t,e){var n=t[1]||"",o=t[3];if(!o)return n;if(e&&"function"==typeof btoa){var i=(s=o,"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(s))))+" */"),r=o.sources.map((function(t){return"/*# sourceURL="+o.sourceRoot+t+" */"}));return[n].concat(r).concat([i]).join("\n")}var s;return[n].join("\n")}(e,t);return e[2]?"@media "+e[2]+"{"+n+"}":n})).join("")},e.i=function(t,n){"string"==typeof t&&(t=[[null,t,""]]);for(var o={},i=0;i<this.length;i++){var r=this[i][0];"number"==typeof r&&(o[r]=!0)}for(i=0;i<t.length;i++){var s=t[i];"number"==typeof s[0]&&o[s[0]]||(n&&!s[2]?s[2]=n:n&&(s[2]="("+s[2]+") and ("+n+")"),e.push(s))}},e}},function(t,e,n){var o,i,r={},s=(o=function(){return window&&document&&document.all&&!window.atob},function(){return void 0===i&&(i=o.apply(this,arguments)),i}),a=function(t){return document.querySelector(t)},l=function(t){var e={};return function(t){if("function"==typeof t)return t();if(void 0===e[t]){var n=a.call(this,t);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(t){n=null}e[t]=n}return e[t]}}(),u=null,c=0,f=[],p=n(5);function d(t,e){for(var n=0;n<t.length;n++){var o=t[n],i=r[o.id];if(i){i.refs++;for(var s=0;s<i.parts.length;s++)i.parts[s](o.parts[s]);for(;s<o.parts.length;s++)i.parts.push(m(o.parts[s],e))}else{var a=[];for(s=0;s<o.parts.length;s++)a.push(m(o.parts[s],e));r[o.id]={id:o.id,refs:1,parts:a}}}}function h(t,e){for(var n=[],o={},i=0;i<t.length;i++){var r=t[i],s=e.base?r[0]+e.base:r[0],a={css:r[1],media:r[2],sourceMap:r[3]};o[s]?o[s].parts.push(a):n.push(o[s]={id:s,parts:[a]})}return n}function v(t,e){var n=l(t.insertInto);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var o=f[f.length-1];if("top"===t.insertAt)o?o.nextSibling?n.insertBefore(e,o.nextSibling):n.appendChild(e):n.insertBefore(e,n.firstChild),f.push(e);else if("bottom"===t.insertAt)n.appendChild(e);else{if("object"!=typeof t.insertAt||!t.insertAt.before)throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");var i=l(t.insertInto+" "+t.insertAt.before);n.insertBefore(e,i)}}function b(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t);var e=f.indexOf(t);e>=0&&f.splice(e,1)}function g(t){var e=document.createElement("style");return void 0===t.attrs.type&&(t.attrs.type="text/css"),y(e,t.attrs),v(t,e),e}function y(t,e){Object.keys(e).forEach((function(n){t.setAttribute(n,e[n])}))}function m(t,e){var n,o,i,r;if(e.transform&&t.css){if(!(r=e.transform(t.css)))return function(){};t.css=r}if(e.singleton){var s=c++;n=u||(u=g(e)),o=x.bind(null,n,s,!1),i=x.bind(null,n,s,!0)}else t.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(n=function(t){var e=document.createElement("link");return void 0===t.attrs.type&&(t.attrs.type="text/css"),t.attrs.rel="stylesheet",y(e,t.attrs),v(t,e),e}(e),o=L.bind(null,n,e),i=function(){b(n),n.href&&URL.revokeObjectURL(n.href)}):(n=g(e),o=k.bind(null,n),i=function(){b(n)});return o(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;o(t=e)}else i()}}t.exports=function(t,e){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");(e=e||{}).attrs="object"==typeof e.attrs?e.attrs:{},e.singleton||"boolean"==typeof e.singleton||(e.singleton=s()),e.insertInto||(e.insertInto="head"),e.insertAt||(e.insertAt="bottom");var n=h(t,e);return d(n,e),function(t){for(var o=[],i=0;i<n.length;i++){var s=n[i];(a=r[s.id]).refs--,o.push(a)}t&&d(h(t,e),e);for(i=0;i<o.length;i++){var a;if(0===(a=o[i]).refs){for(var l=0;l<a.parts.length;l++)a.parts[l]();delete r[a.id]}}}};var S,w=(S=[],function(t,e){return S[t]=e,S.filter(Boolean).join("\n")});function x(t,e,n,o){var i=n?"":o.css;if(t.styleSheet)t.styleSheet.cssText=w(e,i);else{var r=document.createTextNode(i),s=t.childNodes;s[e]&&t.removeChild(s[e]),s.length?t.insertBefore(r,s[e]):t.appendChild(r)}}function k(t,e){var n=e.css,o=e.media;if(o&&t.setAttribute("media",o),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}function L(t,e,n){var o=n.css,i=n.sourceMap,r=void 0===e.convertToAbsoluteUrls&&i;(e.convertToAbsoluteUrls||r)&&(o=p(o)),i&&(o+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(i))))+" */");var s=new Blob([o],{type:"text/css"}),a=t.href;t.href=URL.createObjectURL(s),a&&URL.revokeObjectURL(a)}},function(t,e){t.exports=function(t){var e="undefined"!=typeof window&&window.location;if(!e)throw new Error("fixUrls requires window.location");if(!t||"string"!=typeof t)return t;var n=e.protocol+"//"+e.host,o=n+e.pathname.replace(/\/[^\/]*$/,"/");return t.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,(function(t,e){var i,r=e.trim().replace(/^"(.*)"$/,(function(t,e){return e})).replace(/^'(.*)'$/,(function(t,e){return e}));return/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(r)?t:(i=0===r.indexOf("//")?r:0===r.indexOf("/")?n+r:o+r.replace(/^\.\//,""),"url("+JSON.stringify(i)+")")}))}}])}));
+
+/***/ }),
+
+/***/ "./node_modules/editorjs-paragraph-with-alignment/dist/bundle.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/editorjs-paragraph-with-alignment/dist/bundle.js ***!
+  \***********************************************************************/
+/***/ ((module) => {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __nested_webpack_require_543__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_543__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__nested_webpack_require_543__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__nested_webpack_require_543__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__nested_webpack_require_543__.d = function(exports, name, getter) {
+/******/ 		if(!__nested_webpack_require_543__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__nested_webpack_require_543__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__nested_webpack_require_543__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __nested_webpack_require_543__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__nested_webpack_require_543__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __nested_webpack_require_543__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__nested_webpack_require_543__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__nested_webpack_require_543__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__nested_webpack_require_543__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__nested_webpack_require_543__.p = "/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __nested_webpack_require_543__(__nested_webpack_require_543__.s = "./src/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/index.css":
+/*!*************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".ce-paragraph {\\n    line-height: 1.6em;\\n    outline: none;\\n}\\n.ce-paragraph--right {\\n    text-align: right;\\n}\\n.ce-paragraph--center {\\n    text-align: center;\\n}\\n.ce-paragraph--left {\\n    text-align: left;\\n}\\n\\n.ce-paragraph[data-placeholder]:empty::before{\\n  content: attr(data-placeholder);\\n  color: #707684;\\n  font-weight: normal;\\n  opacity: 0;\\n}\\n\\n/** Show placeholder at the first paragraph if Editor is empty */\\n.codex-editor--empty .ce-block:first-child .ce-paragraph[data-placeholder]:empty::before {\\n  opacity: 1;\\n}\\n\\n.codex-editor--toolbox-opened .ce-block:first-child .ce-paragraph[data-placeholder]:empty::before,\\n.codex-editor--empty .ce-block:first-child .ce-paragraph[data-placeholder]:empty:focus::before {\\n  opacity: 0;\\n}\\n\\n.ce-paragraph p:first-of-type{\\n    margin-top: 0;\\n}\\n\\n.ce-paragraph p:last-of-type{\\n    margin-bottom: 0;\\n}\\n\\n\\n.svg-icon {\\n    width: 1em;\\n    height: 1em;\\n}\\n\\n.svg-icon path,\\n.svg-icon polygon,\\n.svg-icon rect {\\n    fill: #4691f6;\\n}\\n\\n.svg-icon circle {\\n    stroke: #4691f6;\\n    stroke-width: 1;\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack://Paragraph/./src/index.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack://Paragraph/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function memorize() {\n    if (typeof memo === 'undefined') {\n      // Test for IE <= 9 as proposed by Browserhacks\n      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n      // Tests for existence of standard globals is to allow style-loader\n      // to operate correctly into non-standard environments\n      // @see https://github.com/webpack-contrib/style-loader/issues/177\n      memo = Boolean(window && document && document.all && !window.atob);\n    }\n\n    return memo;\n  };\n}();\n\nvar getTarget = function getTarget() {\n  var memo = {};\n  return function memorize(target) {\n    if (typeof memo[target] === 'undefined') {\n      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n        try {\n          // This will throw an exception if access to iframe is blocked\n          // due to cross-origin restrictions\n          styleTarget = styleTarget.contentDocument.head;\n        } catch (e) {\n          // istanbul ignore next\n          styleTarget = null;\n        }\n      }\n\n      memo[target] = styleTarget;\n    }\n\n    return memo[target];\n  };\n}();\n\nvar stylesInDom = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDom.length; i++) {\n    if (stylesInDom[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var index = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3]\n    };\n\n    if (index !== -1) {\n      stylesInDom[index].references++;\n      stylesInDom[index].updater(obj);\n    } else {\n      stylesInDom.push({\n        identifier: identifier,\n        updater: addStyle(obj, options),\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction insertStyleElement(options) {\n  var style = document.createElement('style');\n  var attributes = options.attributes || {};\n\n  if (typeof attributes.nonce === 'undefined') {\n    var nonce =  true ? __webpack_require__.nc : undefined;\n\n    if (nonce) {\n      attributes.nonce = nonce;\n    }\n  }\n\n  Object.keys(attributes).forEach(function (key) {\n    style.setAttribute(key, attributes[key]);\n  });\n\n  if (typeof options.insert === 'function') {\n    options.insert(style);\n  } else {\n    var target = getTarget(options.insert || 'head');\n\n    if (!target) {\n      throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n    }\n\n    target.appendChild(style);\n  }\n\n  return style;\n}\n\nfunction removeStyleElement(style) {\n  // istanbul ignore if\n  if (style.parentNode === null) {\n    return false;\n  }\n\n  style.parentNode.removeChild(style);\n}\n/* istanbul ignore next  */\n\n\nvar replaceText = function replaceText() {\n  var textStore = [];\n  return function replace(index, replacement) {\n    textStore[index] = replacement;\n    return textStore.filter(Boolean).join('\\n');\n  };\n}();\n\nfunction applyToSingletonTag(style, index, remove, obj) {\n  var css = remove ? '' : obj.media ? \"@media \".concat(obj.media, \" {\").concat(obj.css, \"}\") : obj.css; // For old IE\n\n  /* istanbul ignore if  */\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = replaceText(index, css);\n  } else {\n    var cssNode = document.createTextNode(css);\n    var childNodes = style.childNodes;\n\n    if (childNodes[index]) {\n      style.removeChild(childNodes[index]);\n    }\n\n    if (childNodes.length) {\n      style.insertBefore(cssNode, childNodes[index]);\n    } else {\n      style.appendChild(cssNode);\n    }\n  }\n}\n\nfunction applyToTag(style, options, obj) {\n  var css = obj.css;\n  var media = obj.media;\n  var sourceMap = obj.sourceMap;\n\n  if (media) {\n    style.setAttribute('media', media);\n  } else {\n    style.removeAttribute('media');\n  }\n\n  if (sourceMap && typeof btoa !== 'undefined') {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nvar singleton = null;\nvar singletonCounter = 0;\n\nfunction addStyle(obj, options) {\n  var style;\n  var update;\n  var remove;\n\n  if (options.singleton) {\n    var styleIndex = singletonCounter++;\n    style = singleton || (singleton = insertStyleElement(options));\n    update = applyToSingletonTag.bind(null, style, styleIndex, false);\n    remove = applyToSingletonTag.bind(null, style, styleIndex, true);\n  } else {\n    style = insertStyleElement(options);\n    update = applyToTag.bind(null, style, options);\n\n    remove = function remove() {\n      removeStyleElement(style);\n    };\n  }\n\n  update(obj);\n  return function updateStyle(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {\n        return;\n      }\n\n      update(obj = newObj);\n    } else {\n      remove();\n    }\n  };\n}\n\nmodule.exports = function (list, options) {\n  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n  // tags it will allow on a page\n\n  if (!options.singleton && typeof options.singleton !== 'boolean') {\n    options.singleton = isOldIE();\n  }\n\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    if (Object.prototype.toString.call(newList) !== '[object Array]') {\n      return;\n    }\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDom[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDom[_index].references === 0) {\n        stylesInDom[_index].updater();\n\n        stylesInDom.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack://Paragraph/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./index.css */ \"./node_modules/css-loader/dist/cjs.js!./src/index.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack://Paragraph/./src/index.css?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n/**\n * Build styles\n */\n__webpack_require__(/*! ./index.css */ \"./src/index.css\").toString();\n\nvar Paragraph = /*#__PURE__*/function () {\n  _createClass(Paragraph, null, [{\n    key: \"DEFAULT_PLACEHOLDER\",\n\n    /**\n     * Default placeholder for Paragraph Tool\n     *\n     * @return {string}\n     * @constructor\n     */\n    get: function get() {\n      return '';\n    }\n    /**\n     * Allowed paragraph alignments\n     *\n     * @public\n     * @returns {{left: string, center: string}}\n     */\n\n  }, {\n    key: \"ALIGNMENTS\",\n    get: function get() {\n      return {\n        left: 'left',\n        center: 'center',\n        right: 'right'\n      };\n    }\n    /**\n     *\n     * @returns {boolean}\n     */\n\n  }, {\n    key: \"isReadOnlySupported\",\n    get: function get() {\n      return true;\n    }\n    /**\n     * Default paragraph alignment\n     *\n     * @public\n     * @returns {string}\n     */\n\n  }, {\n    key: \"DEFAULT_ALIGNMENT\",\n    get: function get() {\n      return Paragraph.ALIGNMENTS.left;\n    }\n    /**\n     *\n     * @param data\n     * @param config\n     * @param api\n     * @param readOnly\n     */\n\n  }]);\n\n  function Paragraph(_ref) {\n    var data = _ref.data,\n        config = _ref.config,\n        api = _ref.api,\n        readOnly = _ref.readOnly;\n\n    _classCallCheck(this, Paragraph);\n\n    this.api = api;\n    this.config = config;\n    this.readOnly = readOnly;\n    this._CSS = {\n      block: this.api.styles.block,\n      wrapper: 'ce-paragraph',\n      alignment: {\n        left: 'ce-paragraph--left',\n        center: 'ce-paragraph--center',\n        right: 'ce-paragraph--right'\n      }\n    };\n    this.CSS = {\n      baseClass: this.api.styles.block,\n      loading: this.api.styles.loader,\n      input: this.api.styles.input,\n      settingsButton: this.api.styles.settingsButton,\n      settingsButtonActive: this.api.styles.settingsButtonActive\n    };\n    this.settings = [{\n      name: 'left',\n      icon: \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" id=\\\"Layer\\\" enable-background=\\\"new 0 0 64 64\\\" height=\\\"20\\\" viewBox=\\\"0 0 64 64\\\" width=\\\"20\\\"><path d=\\\"m54 8h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m54 52h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m10 23h28c1.104 0 2-.896 2-2s-.896-2-2-2h-28c-1.104 0-2 .896-2 2s.896 2 2 2z\\\"/><path d=\\\"m54 30h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m10 45h28c1.104 0 2-.896 2-2s-.896-2-2-2h-28c-1.104 0-2 .896-2 2s.896 2 2 2z\\\"/></svg>\"\n    }, {\n      name: 'center',\n      icon: \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" id=\\\"Layer\\\" enable-background=\\\"new 0 0 64 64\\\" height=\\\"20\\\" viewBox=\\\"0 0 64 64\\\" width=\\\"20\\\"><path d=\\\"m54 8h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m54 52h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m46 23c1.104 0 2-.896 2-2s-.896-2-2-2h-28c-1.104 0-2 .896-2 2s.896 2 2 2z\\\"/><path d=\\\"m54 30h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m46 45c1.104 0 2-.896 2-2s-.896-2-2-2h-28c-1.104 0-2 .896-2 2s.896 2 2 2z\\\"/></svg>\"\n    }, {\n      name: 'right',\n      icon: \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" id=\\\"Layer\\\" enable-background=\\\"new 0 0 64 64\\\" height=\\\"20\\\" viewBox=\\\"0 0 64 64\\\" width=\\\"20\\\"><path d=\\\"m54 8h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m54 52h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m54 19h-28c-1.104 0-2 .896-2 2s.896 2 2 2h28c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m54 30h-44c-1.104 0-2 .896-2 2s.896 2 2 2h44c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/><path d=\\\"m54 41h-28c-1.104 0-2 .896-2 2s.896 2 2 2h28c1.104 0 2-.896 2-2s-.896-2-2-2z\\\"/></svg>\"\n    }];\n    this.onKeyUp = this.onKeyUp.bind(this);\n    /**\n     * Placeholder for paragraph if it is first Block\n     * @type {string}\n     */\n\n    this._placeholder = config.placeholder ? config.placeholder : Paragraph.DEFAULT_PLACEHOLDER;\n    this._data = {\n      text: data.text || '',\n      alignment: data.alignment || config.defaultAlignment || Paragraph.DEFAULT_ALIGNMENT\n    };\n    this._element = this.drawView();\n    this.data = data;\n    this._preserveBlank = config.preserveBlank !== undefined ? config.preserveBlank : false;\n  }\n  /**\n   * Check if text content is empty and set empty string to inner html.\n   * We need this because some browsers (e.g. Safari) insert <br> into empty contenteditanle elements\n   *\n   * @param {KeyboardEvent} e - key up event\n   */\n\n\n  _createClass(Paragraph, [{\n    key: \"onKeyUp\",\n    value: function onKeyUp(e) {\n      if (e.code !== 'Backspace' && e.code !== 'Delete') {\n        return;\n      }\n\n      var textContent = this._element.textContent;\n\n      if (textContent === '') {\n        this._element.innerHTML = '';\n      }\n    }\n    /**\n     * Create Tool's view\n     * @return {HTMLElement}\n     * @private\n     */\n\n  }, {\n    key: \"drawView\",\n    value: function drawView() {\n      var div = document.createElement('DIV');\n      div.classList.add(this._CSS.wrapper, this._CSS.block, this._CSS.alignment[this.data.alignment]);\n      div.contentEditable = !this.readOnly;\n      div.dataset.placeholder = this.api.i18n.t(this._placeholder);\n      div.innerHTML = this.data.text;\n      div.addEventListener('keyup', this.onKeyUp);\n      return div;\n    }\n    /**\n     * Return Tool's view\n     * @returns {HTMLDivElement}\n     * @public\n     */\n\n  }, {\n    key: \"render\",\n    value: function render() {\n      return this._element;\n    }\n    /**\n     * Method that specified how to merge two Text blocks.\n     * Called by Editor.js by backspace at the beginning of the Block\n     * @param {ParagraphData} data\n     * @public\n     */\n\n  }, {\n    key: \"merge\",\n    value: function merge(data) {\n      var newData = {\n        text: this.data.text += data.text,\n        alignment: this.data.alignment\n      };\n      this._element.innerHTML = this.data.text;\n      this.data = newData;\n    }\n    /**\n     * Validate Paragraph block data:\n     * - check for emptiness\n     *\n     * @param {ParagraphData} savedData — data received after saving\n     * @returns {boolean} false if saved data is not correct, otherwise true\n     * @public\n     */\n\n  }, {\n    key: \"validate\",\n    value: function validate(savedData) {\n      if (savedData.text.trim() === '' && !this._preserveBlank) {\n        return false;\n      }\n\n      return true;\n    }\n    /**\n     * Extract Tool's data from the view\n     * @param {HTMLDivElement} toolsContent - Paragraph tools rendered view\n     * @returns {ParagraphData} - saved data\n     * @public\n     */\n\n  }, {\n    key: \"save\",\n    value: function save(toolsContent) {\n      return Object.assign(this.data, {\n        text: toolsContent.innerHTML\n      });\n    }\n    /**\n     * On paste callback fired from Editor.\n     *\n     * @param {PasteEvent} event - event with pasted data\n     */\n\n  }, {\n    key: \"onPaste\",\n    value: function onPaste(event) {\n      var data = {\n        text: event.detail.data.innerHTML,\n        alignment: this.config.defaultAlignment || Paragraph.DEFAULT_ALIGNMENT\n      };\n      this.data = data;\n    }\n    /**\n     * Get current Tools`s data\n     * @returns {ParagraphData} Current data\n     * @private\n     */\n\n  }, {\n    key: \"renderSettings\",\n\n    /**\n     *\n     * @returns {HTMLDivElement}\n     */\n    value: function renderSettings() {\n      var _this = this;\n\n      var wrapper = document.createElement('div');\n      this.settings.map(function (tune) {\n        /**\n         * buttonのdomを作成して、alignのtoggleをactiveに設定する\n         * @type {HTMLDivElement}\n         */\n        var button = document.createElement('div');\n        button.classList.add('cdx-settings-button');\n        button.innerHTML = tune.icon;\n        button.classList.toggle(_this.CSS.settingsButtonActive, tune.name === _this.data.alignment);\n        wrapper.appendChild(button);\n        return button;\n      }).forEach(function (element, index, elements) {\n        element.addEventListener('click', function () {\n          _this._toggleTune(_this.settings[index].name);\n\n          elements.forEach(function (el, i) {\n            var name = _this.settings[i].name;\n            el.classList.toggle(_this.CSS.settingsButtonActive, name === _this.data.alignment); //paragraphのdivにalignmentのclassをつける。\n\n            _this._element.classList.toggle(_this._CSS.alignment[name], name === _this.data.alignment);\n          });\n        });\n      });\n      return wrapper;\n    }\n    /**\n     * @private\n     * Click on the Settings Button\n     * @param {string} tune — tune name from this.settings\n     */\n\n  }, {\n    key: \"_toggleTune\",\n    value: function _toggleTune(tune) {\n      this.data.alignment = tune;\n    }\n    /**\n     * Icon and title for displaying at the Toolbox\n     *\n     * @return {{icon: string, title: string}}\n     */\n\n  }, {\n    key: \"data\",\n    get: function get() {\n      return this._data;\n    }\n    /**\n     * Store data in plugin:\n     * - at the this._data property\n     * - at the HTML\n     *\n     * @param {ParagraphData} data — data to set\n     * @private\n     */\n    ,\n    set: function set(data) {\n      this._data = {\n        text: data.text || '',\n        alignment: data.alignment || this.config.defaultAlignment || Paragraph.DEFAULT_ALIGNMENT\n      };\n      this._element.innerHTML = this._data.text || '';\n    }\n    /**\n     * Enable Conversion Toolbar. Paragraph can be converted to/from other tools\n     */\n\n  }], [{\n    key: \"conversionConfig\",\n    get: function get() {\n      return {\n        \"export\": 'text',\n        // to convert Paragraph to other block, use 'text' property of saved data\n        \"import\": 'text' // to covert other block's exported string to Paragraph, fill 'text' property of tool data\n\n      };\n    }\n    /**\n     * Sanitizer rules\n     */\n\n  }, {\n    key: \"sanitize\",\n    get: function get() {\n      return {\n        text: {\n          br: true\n        },\n        alignment: {}\n      };\n    }\n    /**\n     * Used by Editor paste handling API.\n     * Provides configuration to handle P tags.\n     *\n     * @returns {{tags: string[]}}\n     */\n\n  }, {\n    key: \"pasteConfig\",\n    get: function get() {\n      return {\n        tags: ['P']\n      };\n    }\n  }, {\n    key: \"toolbox\",\n    get: function get() {\n      return {\n        icon: __webpack_require__(/*! ./toolbox-icon.svg */ \"./src/toolbox-icon.svg\")[\"default\"],\n        title: 'Text'\n      };\n    }\n  }]);\n\n  return Paragraph;\n}();\n\nmodule.exports = Paragraph;\n\n//# sourceURL=webpack://Paragraph/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/toolbox-icon.svg":
+/*!******************************!*\
+  !*** ./src/toolbox-icon.svg ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0.2 -0.3 9 11.4\\\" width=\\\"12\\\" height=\\\"14\\\">\\n  <path d=\\\"M0 2.77V.92A1 1 0 01.2.28C.35.1.56 0 .83 0h7.66c.28.01.48.1.63.28.14.17.21.38.21.64v1.85c0 .26-.08.48-.23.66-.15.17-.37.26-.66.26-.28 0-.5-.09-.64-.26a1 1 0 01-.21-.66V1.69H5.6v7.58h.5c.25 0 .45.08.6.23.17.16.25.35.25.6s-.08.45-.24.6a.87.87 0 01-.62.22H3.21a.87.87 0 01-.61-.22.78.78 0 01-.24-.6c0-.25.08-.44.24-.6a.85.85 0 01.61-.23h.5V1.7H1.73v1.08c0 .26-.08.48-.23.66-.15.17-.37.26-.66.26-.28 0-.5-.09-.64-.26A1 1 0 010 2.77z\\\"/>\\n</svg>\\n\");\n\n//# sourceURL=webpack://Paragraph/./src/toolbox-icon.svg?");
+
+/***/ })
+
+/******/ });
 });
 
 /***/ }),

@@ -29,19 +29,19 @@
                         role="menu"
                         id="userDropDown">
                         <a
-                            href="#"
+                            href="/dashboard"
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             role="menuitem">
-                            Your Profile
+                            Dashboard
                         </a>
                         <a
-                            href="#"
+                            href="/blog/create"
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             role="menuitem">
-                            Settings
+                            Settings / Create
                         </a>
                         <a
-                            href="#"
+                            href="/logout"
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             role="menuitem">
                             Sign out

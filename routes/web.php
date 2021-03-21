@@ -23,7 +23,8 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::get("/", [MainController::class, "index"]);
 
-Route::get("/blog_home", [MainController::class, "blog"]);
+Route::get("/blog", [MainController::class, "blog"]);
+Route::get("/blog/heftyb/imgs/{filename}", [MainController::class, "getImg"]);
 Route::get("/contact", [MainController::class, "contact"]);
 Route::get("/login", [MainController::class, "login"]);
 
@@ -44,4 +45,8 @@ Route::get('/auth/google/callback', [AuthController::class, "callback"]);
 
 Route::get('/logout', [AuthController::class, "logout"]);
 
+Route::get("/dashboard", [AuthController::class, "dashboard"])->middleware("auth")->name("dashboard");
+
 Route::get("/blog/create", [AuthController::class, "blogForm"])->middleware("auth");
+
+Route::post("/upload", [AuthController::class, "uploadImg"])->middleware("auth");

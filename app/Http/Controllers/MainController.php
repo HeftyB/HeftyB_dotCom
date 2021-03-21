@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Laravel\Socialite\Facades\Socialite;
 
 class blogPost
@@ -77,7 +78,6 @@ class blogPost
         $this->published = $published;
     }
 
-
 }
 
 class MainController extends Controller
@@ -88,8 +88,6 @@ class MainController extends Controller
 
     public function blog()
     {
-
-//        dd(Auth::check());
 
         $b1 = new blogPost("Blog post 1", "this would be a photo", "Andrew Shields", "12/12/2012");
         $b2 = new blogPost("Blog post 2", "this would be a photo", "Andrew Shields", "12/12/2012");
@@ -115,5 +113,10 @@ class MainController extends Controller
 
     public function login() {
         return view("login");
+    }
+
+    public function getImg(Request $request, $filename)
+    {
+        return Storage::get("heftyb/imgs/".$filename);
     }
 }
