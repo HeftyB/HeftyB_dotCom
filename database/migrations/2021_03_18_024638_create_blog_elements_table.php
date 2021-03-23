@@ -16,6 +16,7 @@ class CreateBlogElementsTable extends Migration
         Schema::create('blog_elements', function (Blueprint $table) {
             $table->id();
             $table->text("value");
+            $table->string("styles");
             $table->integer("order");
             $table->foreignId('element_id')
                 ->constrained()

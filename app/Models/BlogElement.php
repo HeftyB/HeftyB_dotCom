@@ -11,6 +11,7 @@ class BlogElement extends Model
 
     protected $fillable = [
         'value',
+        'styles',
         'order',
         'element_id',
         'blog_post_id'

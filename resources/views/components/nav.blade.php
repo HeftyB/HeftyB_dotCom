@@ -4,7 +4,7 @@
             <div class="px-3 pl-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a href="/">Home</a></div>
             <div class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a href="/contact">Contact</a></div>
             <div class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a href="/#projects">Projects</a></div>
-            <div class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a href="/blog_home">Blog</a></div>
+            <div class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a href="/blog">Blog</a></div>
         </div>
 
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

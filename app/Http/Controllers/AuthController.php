@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Element;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -14,9 +15,11 @@ use App\Models\User;
 use App\Models\BlogPost;
 use App\Models\BlogElement;
 use App\Models\UserFile;
+use services\BlogService;
 
 class AuthController extends Controller
 {
+
     public function redirect()
     {
         return Socialite::driver('google')->redirect();
@@ -62,47 +65,52 @@ class AuthController extends Controller
 
     public function createBlogPost(Request $request)
     {
-        $userId = Auth::user()->getAuthIdentifier();
+        $user = User::find(Auth::user()->getAuthIdentifier());
         $title = $request->input("title");
         $blocks = $request->input("data.blocks");
 
-
-        $blogPost = BlogPost::create([
+        $blogPost = new BlogPost([
             "title" => $title,
-            "user_id" => $userId,
             "img" => "/test/testdir/test.jpeg"
         ]);
 
-        $elements = array();
+        $elementList = array();
 
-//        foreach ($blocks as $block)
-//        {
-//            $e = new BlogElement([
-//
-//            ]);
-//            BlogElement::create([
-//
-//        ]);
-//        }
+        foreach ($blocks as $key=>$block)
+        {
+            if($block["type"] == "image")
+            {
+                continue;
+            }
 
-        return $blocks;
+            $element = Element::firstWhere("name", $block["type"]);
+            $ret = $this->blogElementValue($block["type"], $block["data"]);
+
+            $e = new BlogElement([
+                "value" => $ret["value"],
+                "styles" => $ret["styles"],
+                "order" => $key,
+                "element_id" => $element->id
+            ]);
+
+            array_push($elementList, $e);
+        }
+
+        $user->blogPosts()->save($blogPost);
+        $blogPost->refresh();
+        $blogPost->blogElements()->saveMany($elementList);
+
+        return redirect()->route("dashboard");
     }
 
     public function uploadImg(Request $request)
     {
         if ($request->hasFile("image") && $request->file("image")->isValid())
         {
-            $validated = $request->validate([
-                "img" => ["mimes:jpeg,png", "max:4096"]
-            ]);
-//            dd($validated);
-            $path = $request->image->store("heftyb/imgs");
-
-//            $file = UserFile::create([
-//                "name" => "test name",
-//                "path" => $path,
-//                "user_id" => Auth::user()->getAuthIdentifier()
+//            $validated = $request->validate([
+//                "img" => ["mimes:jpeg,png", "max:4096"]
 //            ]);
+            $path = $request->image->store("heftyb/imgs");
 
             $file = new UserFile([
                 "name" => "test Name",
@@ -120,21 +128,54 @@ class AuthController extends Controller
             ];
         }
         else {
-            abort(500);
+            abort(500, "File could not be uploaded!");
         }
     }
 
     public function uploadURL(Request $request)
     {
         $url = $request->input("url");
-
-//        $content = file_get_contents($url);
         $image = new File($url);
-
-//        Storage::put("/heftyb/imgs", $content);
-
         $request->files->set("image", $image);
 
         return $this->uploadImg($request);
+    }
+
+
+
+    public function blogElementValue($type, $data)
+    {
+        switch ($type) {
+            case "paragraph":
+                $ret = [
+                    "value" => $data["text"],
+                    "styles" => "text-".$data["alignment"]
+                ];
+                break;
+            case "image":
+                $ret = [];
+                break;
+            case "header":
+                $ret = [
+                    "value" => $data["text"],
+                    "styles" => "text-".$data["level"]
+                ];
+                break;
+            case "code":
+                $ret = [
+                    "value" => $data["code"],
+                    "styles" => "code-block"
+                ];
+                break;
+            case "list":
+                $ret = [
+                    "value" => implode("|", $data["items"]),
+                    "styles" => "ordered"
+                ];
+                break;
+            default:
+                $ret = null;
+        }
+        return $ret;
     }
 }

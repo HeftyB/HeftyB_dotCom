@@ -29,16 +29,6 @@ Route::get("/contact", [MainController::class, "contact"]);
 Route::get("/login", [MainController::class, "login"]);
 
 
-
-//Route::get('/auth/redirect', function () {
-//    return Socialite::driver('google')->redirect();
-//});
-//
-//Route::get('/auth/google/callback', function () {
-//    $user = Socialite::driver('google')->user();
-//    return response($user->getId(), 200);
-//});
-
 Route::get('/auth/redirect', [AuthController::class, "redirect"]);
 
 Route::get('/auth/google/callback', [AuthController::class, "callback"]);

@@ -19,8 +19,8 @@ body .skill-i {
 }
 
 .blogTile1 {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column: span 6;
+    /*grid-row: span 2;*/
 }
 
 .blogTile2 {
@@ -29,11 +29,12 @@ body .skill-i {
 }
 
 .blogTile3 {
-    grid-row: span 2;
+    /*grid-row: span 3;*/
+    grid-column: span 2;
 }
 
 .blogTile4 {
-    grid-row: span 2;
+    /*grid-row: span 2;*/
     grid-column: span 2;
 }
 
@@ -42,22 +43,22 @@ body .skill-i {
 }
 
 .blogTile6 {
-    grid-row: span 2;
+    /*grid-row: span 2;*/
 }
 
 .blogTile7 {
-    grid-row: span 2;
+    /*grid-row: span 2;*/
 }
 
 .blogTile8 {
-    grid-row: span 2;
+    /*grid-row: span 2;*/
 }
 
 .blogTile9 {
-    grid-row: span 2;
+    /*grid-row: span 3;*/
 }
 
 .blogTile10 {
-    grid-row: span 2;
+    /*grid-row: span 5;*/
 }
 
