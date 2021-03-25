@@ -11,24 +11,15 @@
 
 </head>
 <body class="bg-gray-200">
-
 <x-nav/>
-
 <div class="my-0 mx-auto bg-white w-5/6">
-
     <div class="container mx-auto">
-
-{{--        <div class="h1 text-center font-bold my-7">Welcome, {{ \Illuminate\Support\Facades\Auth::user() ? \Illuminate\Support\Facades\Auth::user()->getAuthIdentifierName() : "please sign in!" }}!</div>--}}
-
         @yield("content")
     </div>
 </div>
-{{--<script src="https://apis.google.com/js/platform.js" async defer></script>--}}
-<script>
-    const userDropDown = e => {
-        document.getElementById("userDropDown").classList.toggle("hidden");
-    }
-</script>
-
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="{{ asset('../../js/app.js') }}"></script>
 </body>
 </html>

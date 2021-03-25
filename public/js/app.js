@@ -157,113 +157,176 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // import $ from "jquery";
 
 var token = window.localStorage.getItem("api_token");
 var saveButton = document.getElementById('saveButton');
-var editor = new (_editorjs_editorjs__WEBPACK_IMPORTED_MODULE_0___default())({
-  holder: 'editorjs',
-  tools: {
-    header: (_editorjs_header__WEBPACK_IMPORTED_MODULE_1___default()),
-    list: (_editorjs_list__WEBPACK_IMPORTED_MODULE_3___default()),
-    // quote: Quote,
-    fontSize: (editorjs_inline_font_size_tool__WEBPACK_IMPORTED_MODULE_9___default()),
-    paragraph: {
-      "class": (editorjs_paragraph_with_alignment__WEBPACK_IMPORTED_MODULE_8___default()),
-      inlineToolbar: true
-    },
-    image: {
-      "class": (_editorjs_image__WEBPACK_IMPORTED_MODULE_4___default()),
-      config: {
-        actions: [{
-          name: "resize",
-          icon: "<svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" + "\t viewBox=\"0 0 317.215 317.215\" style=\"enable-background:new 0 0 317.215 317.215;\" xml:space=\"preserve\">\n" + "<g>\n" + "\t<path style=\"fill:#231F20;\" d=\"M309.715,1.107h-71.223c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h18.973\n" + "\t\tl-57.129,57.127c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.197,5.303l14.143,14.143\n" + "\t\tc1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.733,5.304-2.197l57.129-57.127V79.83c0,4.142,3.357,7.5,7.5,7.5h20\n" + "\t\tc4.143,0,7.5-3.358,7.5-7.5V8.607C317.215,4.465,313.857,1.107,309.715,1.107z\"/>\n" + "\t<path style=\"fill:#231F20;\" d=\"M59.75,36.107h18.973c4.143,0,7.5-3.358,7.5-7.5v-20c0-4.142-3.357-7.5-7.5-7.5H7.5\n" + "\t\tc-4.143,0-7.5,3.358-7.5,7.5V79.83c0,4.142,3.357,7.5,7.5,7.5h20c4.143,0,7.5-3.358,7.5-7.5V60.857l57.125,57.126\n" + "\t\tc1.465,1.464,3.385,2.197,5.305,2.197c1.919,0,3.839-0.733,5.305-2.197l14.142-14.143c1.406-1.406,2.196-3.314,2.196-5.303\n" + "\t\tc0-1.989-0.79-3.897-2.196-5.303L59.75,36.107z\"/>\n" + "\t<path style=\"fill:#231F20;\" d=\"M102.734,199.233c-2.93-2.929-7.678-2.929-10.609,0L35,256.358v-18.974c0-4.142-3.357-7.5-7.5-7.5\n" + "\t\th-20c-4.143,0-7.5,3.358-7.5,7.5v71.223c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-20\n" + "\t\tc0-4.142-3.357-7.5-7.5-7.5H59.75l57.126-57.125c1.406-1.406,2.196-3.314,2.196-5.303c0-1.989-0.79-3.897-2.196-5.303\n" + "\t\tL102.734,199.233z\"/>\n" + "\t<path style=\"fill:#231F20;\" d=\"M309.715,229.885h-20c-4.143,0-7.5,3.358-7.5,7.5v18.976l-57.13-57.127\n" + "\t\tc-2.929-2.929-7.677-2.929-10.606,0l-14.143,14.143c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.198,5.303\n" + "\t\tl57.128,57.125h-18.973c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-71.223\n" + "\t\tC317.215,233.243,313.857,229.885,309.715,229.885z\"/>\n" + // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          // "<g>\n" +
-          // "</g>\n" +
-          "</svg>",
-          title: "Resize Image",
-          action: function action(name) {
-            // alert(`${name} button clicked`);
-            // $(this).addClass("ui-widget-content");
-            $(".image-tool").resizable();
-            $(".image-tool").draggable();
-            return true;
-          }
-        }],
-        endpoints: {
-          byFile: '/api/upload',
-          // Your backend file uploader endpoint
-          byUrl: '/api/upload_url' // Your endpoint that provides uploading by Url
 
-        },
-        additionalRequestHeaders: {
+var userDropDown = function userDropDown(e) {
+  document.getElementById("userDropDown").classList.toggle("hidden");
+}; // const editor = $("#editorjs") ? new EditorJS({
+//     holder: 'editorjs',
+//     tools: {
+//         header: Header,
+//         list: List,
+//         // quote: Quote,
+//         fontSize: FontSize,
+//         paragraph: {
+//             class: Paragraph,
+//             inlineToolbar: true
+//         },
+//         image: {
+//             class: ImageTool,
+//             config: {
+//                 actions: [
+//                     {
+//                         name: "resize",
+//                         icon: "<svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
+//                             "\t viewBox=\"0 0 317.215 317.215\" style=\"enable-background:new 0 0 317.215 317.215;\" xml:space=\"preserve\">\n" +
+//                             "<g>\n" +
+//                             "\t<path style=\"fill:#231F20;\" d=\"M309.715,1.107h-71.223c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h18.973\n" +
+//                             "\t\tl-57.129,57.127c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.197,5.303l14.143,14.143\n" +
+//                             "\t\tc1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.733,5.304-2.197l57.129-57.127V79.83c0,4.142,3.357,7.5,7.5,7.5h20\n" +
+//                             "\t\tc4.143,0,7.5-3.358,7.5-7.5V8.607C317.215,4.465,313.857,1.107,309.715,1.107z\"/>\n" +
+//                             "\t<path style=\"fill:#231F20;\" d=\"M59.75,36.107h18.973c4.143,0,7.5-3.358,7.5-7.5v-20c0-4.142-3.357-7.5-7.5-7.5H7.5\n" +
+//                             "\t\tc-4.143,0-7.5,3.358-7.5,7.5V79.83c0,4.142,3.357,7.5,7.5,7.5h20c4.143,0,7.5-3.358,7.5-7.5V60.857l57.125,57.126\n" +
+//                             "\t\tc1.465,1.464,3.385,2.197,5.305,2.197c1.919,0,3.839-0.733,5.305-2.197l14.142-14.143c1.406-1.406,2.196-3.314,2.196-5.303\n" +
+//                             "\t\tc0-1.989-0.79-3.897-2.196-5.303L59.75,36.107z\"/>\n" +
+//                             "\t<path style=\"fill:#231F20;\" d=\"M102.734,199.233c-2.93-2.929-7.678-2.929-10.609,0L35,256.358v-18.974c0-4.142-3.357-7.5-7.5-7.5\n" +
+//                             "\t\th-20c-4.143,0-7.5,3.358-7.5,7.5v71.223c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-20\n" +
+//                             "\t\tc0-4.142-3.357-7.5-7.5-7.5H59.75l57.126-57.125c1.406-1.406,2.196-3.314,2.196-5.303c0-1.989-0.79-3.897-2.196-5.303\n" +
+//                             "\t\tL102.734,199.233z\"/>\n" +
+//                             "\t<path style=\"fill:#231F20;\" d=\"M309.715,229.885h-20c-4.143,0-7.5,3.358-7.5,7.5v18.976l-57.13-57.127\n" +
+//                             "\t\tc-2.929-2.929-7.677-2.929-10.606,0l-14.143,14.143c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.198,5.303\n" +
+//                             "\t\tl57.128,57.125h-18.973c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-71.223\n" +
+//                             "\t\tC317.215,233.243,313.857,229.885,309.715,229.885z\"/>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             // "<g>\n" +
+//                             // "</g>\n" +
+//                             "</svg>",
+//                         title: "Resize Image",
+//                         action: name => {
+//                             // alert(`${name} button clicked`);
+//                             // $(this).addClass("ui-widget-content");
+//                             $(".image-tool").resizable();
+//                             $(".image-tool").draggable();
+//                             return true;
+//                         }
+//                     }
+//                 ],
+//                 endpoints: {
+//                     byFile: '/api/upload', // Your backend file uploader endpoint
+//                     byUrl: '/api/upload_url', // Your endpoint that provides uploading by Url
+//                 },
+//                 additionalRequestHeaders: {"Authorization": `Bearer ${token}`}
+//             }
+//         },
+//         code: CodeTool,
+//         Marker: {
+//             class: Marker,
+//             shortcut: 'CMD+SHIFT+M',
+//         },
+//     },
+//     // autofocus: true,
+//     placeholder: "Come on, write something already!",
+//     onReady: () => {
+//         new Undo({editor});
+//     },
+// }) : null;
+
+
+if (saveButton) {
+  // console.log("save")
+  saveButton.addEventListener("click", function () {
+    editor.save().then(function (savedData) {
+      $.ajax({
+        type: "POST",
+        url: "/api/blog/create",
+        headers: {
           "Authorization": "Bearer ".concat(token)
+        },
+        data: JSON.stringify({
+          title: $("#blogTitle").text(),
+          data: savedData
+        }),
+        contentType: "application/json",
+        success: function success(data) {
+          console.log(data);
         }
-      }
-    },
-    code: (_editorjs_code__WEBPACK_IMPORTED_MODULE_5___default()),
-    Marker: {
-      "class": (_editorjs_marker__WEBPACK_IMPORTED_MODULE_6___default()),
-      shortcut: 'CMD+SHIFT+M'
-    }
-  },
-  // autofocus: true,
-  placeholder: "Come on, write something already!",
-  onReady: function onReady() {
-    new (editorjs_undo__WEBPACK_IMPORTED_MODULE_7___default())({
-      editor: editor
+      });
+    })["catch"](function (error) {
+      console.error("Saving error", error);
     });
-  }
-});
-saveButton.addEventListener("click", function () {
-  editor.save().then(function (savedData) {
-    $.ajax({
-      type: "POST",
-      url: "/api/blog/create",
-      headers: {
-        "Authorization": "Bearer ".concat(token)
-      },
-      data: JSON.stringify({
-        title: $("#blogTitle").text(),
-        data: savedData
-      }),
-      contentType: "application/json",
-      success: function success(data) {
-        console.log(data);
-      }
-    });
-  })["catch"](function (error) {
-    console.error("Saving error", error);
   });
+}
+
+;
+
+if ($("#thirds")) {
+  $("#thirds").resizable();
+}
+
+$(".blogTile").each(function (index, element) {
+  // let para = $(this);
+  console.log(element.id);
+  $("#".concat(element.id)).hover(function (e) {
+    console.log(e);
+    console.log("para".concat(e.currentTarget.id));
+    $("#para".concat(e.currentTarget.id)).removeClass("invisible");
+  }, function (e) {
+    $("#para".concat(e.currentTarget.id)).addClass("invisible");
+  }); // $(`#${element.id}`).click (function(){
+  //     var buttonId = $(`#${element.id}`).attr("id");
+  //     $("#modal-container").removeAttr("class").addClass(buttonId);
+  //     $("body").addClass("modal-active");
+  // })
+  // $(`#${element.id}`).hover(e => {
+  //     var buttonId = $(`#${element.id}`).attr("id");
+  //     $("#modal-container").removeAttr("class").addClass(buttonId);
+  //     $("body").addClass("modal-active");
+  // }, e => {
+  //     $(`#${element.id}`).addClass('out');
+  //     $('body').removeClass('modal-active');
+  //     });
 });
-$("#thirds").resizable();
+$(".button").click(function () {
+  var buttonId = $(this).attr("id");
+  $("#modal-container").removeAttr("class").addClass(buttonId);
+  $("body").addClass("modal-active");
+});
+$(".modal-container").click(function () {
+  // $(this).click(function(){
+  $(this).addClass('out');
+  $('body').removeClass('modal-active'); // });
+});
 
 /***/ }),
 

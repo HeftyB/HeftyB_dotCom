@@ -3,8 +3,6 @@
 
 @section("content")
 
-
-
     <div class="container w-5/6 mx-auto border border-black h-screen">
 
         <div class="w-full" id="blogContainer">
@@ -32,10 +30,5 @@
             </div>
         </div>
     </div>
-
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="{{ asset('../../js/app.js') }}"></script>
 
 @endsection

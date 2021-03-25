@@ -101,7 +101,9 @@ class MainController extends Controller
         $b10 = new blogPost("Blog post 10", "this would be a photo", "Andrew Shields", "12/12/2012");
 
 
-        $blogPosts = array($b1, $b2, $b3, $b4, $b5, $b6, $b7, $b8, $b9, $b10);
+        $blogPosts = array($b1
+        , $b2, $b3, $b4, $b5, $b6, $b7, $b8, $b9, $b10
+        );
 
 
         return view("blog_home", ["blogPosts" => $blogPosts]);

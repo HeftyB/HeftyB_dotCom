@@ -40,3 +40,7 @@ Route::get("/dashboard", [AuthController::class, "dashboard"])->middleware("auth
 Route::get("/blog/create", [AuthController::class, "blogForm"])->middleware("auth");
 
 Route::post("/upload", [AuthController::class, "uploadImg"])->middleware("auth");
+
+Route::get("/test", function () {
+    return view("test");
+});
