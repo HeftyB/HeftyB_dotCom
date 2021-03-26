@@ -40,7 +40,7 @@
             px-4 py-2
             text-lg text-justify
             text-gray-700
-            invisible
+{{--            invisible--}}
             border-8 border-black border-double
 {{--                bg-white--}}
         {{--                truncate--}}
@@ -50,7 +50,7 @@
             {{--            float-left--}}
             {{--            style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.9));"--}}
         >
-            <div class="truncate whitespace-normal h-full break-words modal-container"
+            <div class="whitespace-normal overflow-ellipsis overflow-y-scroll h-full break-words modal-container"
                                style="text-indent: 40px"
             >
                 Lorem

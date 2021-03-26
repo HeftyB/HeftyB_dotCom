@@ -296,30 +296,31 @@ if ($("#thirds")) {
 
 $(".blogTile").each(function (index, element) {
   // let para = $(this);
-  console.log(element.id);
-  $("#".concat(element.id)).hover(function (e) {
-    console.log(e);
-    console.log("para".concat(e.currentTarget.id));
-    $("#para".concat(e.currentTarget.id)).removeClass("invisible");
-  }, function (e) {
-    $("#para".concat(e.currentTarget.id)).addClass("invisible");
-  }); // $(`#${element.id}`).click (function(){
+  // console.log(element.id);
+  // $(`#${element.id}`).hover(function (e) {
+  //     console.log(e);
+  //     console.log(`para${e.currentTarget.id}`);
+  //     $(`#para${e.currentTarget.id}`).removeClass("invisible");
+  // }, (e) => {
+  //     $(`#para${e.currentTarget.id}`).addClass("invisible");
+  // })
+  // $(`#${element.id}`).click (function(){
   //     var buttonId = $(`#${element.id}`).attr("id");
   //     $("#modal-container").removeAttr("class").addClass(buttonId);
   //     $("body").addClass("modal-active");
   // })
-  // $(`#${element.id}`).hover(e => {
-  //     var buttonId = $(`#${element.id}`).attr("id");
-  //     $("#modal-container").removeAttr("class").addClass(buttonId);
-  //     $("body").addClass("modal-active");
-  // }, e => {
-  //     $(`#${element.id}`).addClass('out');
-  //     $('body').removeClass('modal-active');
-  //     });
+  $("#".concat(element.id)).hover(function (e) {
+    var buttonId = $("#".concat(element.id)).attr("id");
+    $("#modal-container").removeAttr("class").addClass("four");
+    $("body").addClass("modal-active");
+  }, function (e) {
+    $("#".concat(element.id)).addClass('out');
+    $('body').removeClass('modal-active');
+  });
 });
 $(".button").click(function () {
   var buttonId = $(this).attr("id");
-  $("#modal-container").removeAttr("class").addClass(buttonId);
+  $("#modal-container").removeAttr("class").addClass("four");
   $("body").addClass("modal-active");
 });
 $(".modal-container").click(function () {
