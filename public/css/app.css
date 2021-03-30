@@ -31310,21 +31310,33 @@ body .skill-i {
 
 /*}*/
 
-.modal-container, .tilePara {
-  /*position: fixed;*/
-  /*display: table;*/
-  /*height: 100%;*/
-  /*width: 100%;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  transform: scale(0);
-  z-index: 1;
-}
+/*.modal-container, .tilePara {*/
 
-.modal-container.four, tilePara {
-  z-index: 0;
-  transform: scale(1);
-}
+/*    !*position: fixed;*!*/
+
+/*    !*display: table;*!*/
+
+/*    !*height: 100%;*!*/
+
+/*    !*width: 100%;*!*/
+
+/*    !*top: 0;*!*/
+
+/*    !*left: 0;*!*/
+
+/*    transform: scale(0);*/
+
+/*    z-index: 1;*/
+
+/*}*/
+
+/*.modal-container.four {*/
+
+/*    z-index: 0;*/
+
+/*    transform: scale(1);*/
+
+/*}*/
 
 /*#modal-container.four .modal-background {*/
 
@@ -31332,25 +31344,54 @@ body .skill-i {
 
 /*}*/
 
-#modal-container.four .modal-background .modal + .active .tilePara.modal-container {
-  -webkit-animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+/*.modal-container .four .modal-background .modal + .active .tilePara.modal-container {*/
+
+/*    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
+
+/*}*/
+
+/*.modal-container.four + .content {*/
+
+/*    z-index: 1;*/
+
+/*    animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
+
+/*}*/
+
+/*.modal-container.four.out .modal-background .modal {*/
+
+/*    animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
+
+/*}*/
+
+/*.modal-container.four.out + .content {*/
+
+/*    animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
+
+/*}*/
+
+.blogTile.active {
+  /*transform: scale(2);*/
+  -webkit-animation: blowUpContent 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: blowUpContent 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.four + .content {
-  z-index: 1;
-  -webkit-animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+.tilePara.actives {
+  /*transform: scale(1);*/
+  -webkit-animation: blowUpModal 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: blowUpModal 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.four.out .modal-background .modal {
-  -webkit-animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+.tilePara.outs {
+  /*minimizes tilePara*/
+  -webkit-animation: blowUpModalTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: blowUpModalTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.four.out + .content {
-  -webkit-animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+.blogTile.out {
+  /*to bring the blogTile back into view*/
+  -webkit-animation: blowUpContentTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: blowUpContentTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 /*--------------------*/
@@ -31511,77 +31552,131 @@ body .skill-i {
 
 @-webkit-keyframes blowUpContent {
   0% {
+    /*grid-column: initial;*/
+    /*transform: scale(1);*/
+    /*opacity: 1;*/
+    /*height: initial;*/
+    /*position: initial;*/
     transform: scale(1);
-    opacity: 1;
+    /*z-index: initial;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*margin: auto;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*height: 100vh;*/
+    /*position: initial;*/
   }
 
   99.9% {
-    transform: scale(2);
-    opacity: 0;
+    /*transform: scale(2);*/
+    /*opacity: 0;*/
   }
 
   100% {
-    transform: scale(0);
+    /*grid-column: span 6;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*margin: auto;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*height: 100vh;*/
+    /*width: ;*/
+    transform: scale(1);
+    /*z-index: auto;*/
+    /*z-index: 40;*/
+    /*transform: scale3d(1, 1.5 , 2);*/
+    /*position: relative;*/
   }
 }
 
 @keyframes blowUpContent {
   0% {
+    /*grid-column: initial;*/
+    /*transform: scale(1);*/
+    /*opacity: 1;*/
+    /*height: initial;*/
+    /*position: initial;*/
     transform: scale(1);
-    opacity: 1;
+    /*z-index: initial;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*margin: auto;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*height: 100vh;*/
+    /*position: initial;*/
   }
 
   99.9% {
-    transform: scale(2);
-    opacity: 0;
+    /*transform: scale(2);*/
+    /*opacity: 0;*/
   }
 
   100% {
-    transform: scale(0);
+    /*grid-column: span 6;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*margin: auto;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*height: 100vh;*/
+    /*width: ;*/
+    transform: scale(1);
+    /*z-index: auto;*/
+    /*z-index: 40;*/
+    /*transform: scale3d(1, 1.5 , 2);*/
+    /*position: relative;*/
   }
 }
 
 @-webkit-keyframes blowUpContentTwo {
   0% {
-    transform: scale(2);
-    opacity: 0;
+    /*transform: scale(2);*/
+    /*opacity: 0;*/
   }
 
   100% {
-    transform: scale(1);
-    opacity: 1;
+    /*transform: scale(1);*/
+    /*opacity: 1;*/
   }
 }
 
 @keyframes blowUpContentTwo {
   0% {
-    transform: scale(2);
-    opacity: 0;
+    /*transform: scale(2);*/
+    /*opacity: 0;*/
   }
 
   100% {
-    transform: scale(1);
-    opacity: 1;
+    /*transform: scale(1);*/
+    /*opacity: 1;*/
   }
 }
 
 @-webkit-keyframes blowUpModal {
   0% {
     transform: scale(0);
+    opacity: 0;
   }
 
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes blowUpModal {
   0% {
     transform: scale(0);
+    opacity: 0;
   }
 
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 

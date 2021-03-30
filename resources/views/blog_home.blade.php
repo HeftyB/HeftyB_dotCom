@@ -77,7 +77,7 @@
 {{--        </a>--}}
 
 
-    <div class="container grid grid-cols-6 grid-rows-5 gap-4 grid-flow-row gridContainer bg-white">
+    <div class="container grid grid-cols-6 grid-rows-5 gap-4 grid-flow-row gridContainer bg-white relative">
         @foreach($blogPosts as $blogPost)
             <x-blog_tile :blogPost="$blogPost" :num="$loop->iteration"/>
         @endforeach

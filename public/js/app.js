@@ -310,11 +310,13 @@ $(".blogTile").each(function (index, element) {
   //     $("body").addClass("modal-active");
   // })
   $("#".concat(element.id)).hover(function (e) {
-    var buttonId = $("#".concat(element.id)).attr("id");
-    $("#modal-container").removeAttr("class").addClass("four");
+    // var buttonId = $(`#${element.id}`).attr("id");
+    $("#".concat(element.id)).removeClass("out").addClass("active");
+    $("#para".concat(element.id)).removeClass("outs").addClass("actives");
     $("body").addClass("modal-active");
   }, function (e) {
-    $("#".concat(element.id)).addClass('out');
+    $("#".concat(element.id)).removeClass("active").addClass("out");
+    $("#para".concat(element.id)).removeClass("actives").addClass("outs");
     $('body').removeClass('modal-active');
   });
 });
