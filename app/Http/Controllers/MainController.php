@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -19,6 +20,19 @@ class MainController extends Controller
         $blogPosts = \App\Models\BlogPost::all();
 
         return view("blog_home", ["blogPosts" => $blogPosts]);
+    }
+
+    public function blogPost(Request $request, $id)
+    {
+        $blogPost = BlogPost::findOrFail($id);
+
+        $elements = $blogPost->blogElements->sortBy("order");
+
+        return view("blog_post",
+            ["title" => $blogPost->title,
+                "img" => $blogPost->img,
+                "author" => $blogPost->user,
+                "elements" => $elements]);
     }
 
     public function contact() {
