@@ -21,9 +21,10 @@ use Laravel\Socialite\Facades\Socialite;
 //    return view('welcome');
 //});
 
-Route::get("/", [MainController::class, "index"]);
+Route::get("/", [MainController::class, "index"])->name("login");
 
 Route::get("/blog", [MainController::class, "blog"]);
+Route::get("/blog/post/{id}", [MainController::class, "blogPost"]);
 Route::get("/blog/heftyb/imgs/{filename}", [MainController::class, "getImg"]);
 Route::get("/contact", [MainController::class, "contact"]);
 Route::get("/login", [MainController::class, "login"]);
