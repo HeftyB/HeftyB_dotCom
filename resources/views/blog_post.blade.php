@@ -10,7 +10,7 @@
         <p class="text-6xl font-extrabold">{{ $title }}</p>
 
         @foreach($elements as $element)
-            <p class="container m-2 p-4">{{ $element->value }}</p>
+            <p class="container m-2 p-4">{!! $element->value !!}</p>
         @endforeach
     </div>
 @endsection
