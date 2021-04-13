@@ -2,7 +2,8 @@
 
 
 @section("content")
-<x-welcome/>
-<x-skills/>
-<x-projects/>
+    <x-hefty-logo/>
+    <x-welcome/>
+    <x-skills/>
+    <x-projects/>
 @endsection

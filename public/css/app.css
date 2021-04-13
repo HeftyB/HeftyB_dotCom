@@ -551,6 +551,14 @@ video {
   height: auto;
 }
 
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
 .container {
   width: 100%;
 }
@@ -31231,51 +31239,54 @@ body .skill-i {
   width: 32px;
 }
 
-#i-1 {
+.i-1 {
   grid-column: span 4;
   /*grid-row: span 2;*/
 }
 
-#i-2 {
+.i-2 {
   grid-column: span 2;
   /*grid-row: span 4;*/
 }
 
-#i-3 {
+.i-3, .i-5 {
   /*grid-row: span 3;*/
-  grid-column: span 1;
+  /*grid-column: span 2;*/
+  font-size: x-small;
 }
 
-#i-4 {
+.i-4 {
   /*grid-row: span 2;*/
   grid-column: span 2;
 }
 
-#i-5 {
-  grid-column: span 1;
-}
+/*#i-5 {*/
 
-#i-6 {
+/*    grid-column: span 1;*/
+
+/*}*/
+
+.i-6 {
   /*grid-row: span 2;*/
   grid-column: span 2;
 }
 
-#i-7 {
+.i-7 {
   /*grid-row: span 2;*/
   grid-column: span 3;
 }
 
-#i-8 {
+.i-8 {
   /*grid-row: span 2;*/
   grid-column: span 3;
 }
 
-#i-9 {
+.i-9 {
   /*grid-row: span 3;*/
   grid-column: span 2;
 }
 
-#i-10 {
+.i-10 {
   /*grid-row: span 5;*/
   grid-column: span 3;
 }
@@ -31284,271 +31295,25 @@ body .skill-i {
   background-color: #f9f7f1;
 }
 
-/*--------------------------------*/
-
-/*html, body {*/
-
-/*    min-height: 100%;*/
-
-/*    height: 100%;*/
-
-/*    background-image: url(http://theartmad.com/wp-content/uploads/Dark-Grey-Texture-Wallpaper-5.jpg);*/
-
-/*    background-size: cover;*/
-
-/*    background-position: top center;*/
-
-/*    font-family: helvetica neue, helvetica, arial, sans-serif;*/
-
-/*    font-weight: 200;*/
-
-/*}*/
-
-/*html.modal-active, body.modal-active {*/
-
-/*    overflow: hidden;*/
-
-/*}*/
-
-/*.modal-container, .tilePara {*/
-
-/*    !*position: fixed;*!*/
-
-/*    !*display: table;*!*/
-
-/*    !*height: 100%;*!*/
-
-/*    !*width: 100%;*!*/
-
-/*    !*top: 0;*!*/
-
-/*    !*left: 0;*!*/
-
-/*    transform: scale(0);*/
-
-/*    z-index: 1;*/
-
-/*}*/
-
-/*.modal-container.four {*/
-
-/*    z-index: 0;*/
-
-/*    transform: scale(1);*/
-
-/*}*/
-
-/*#modal-container.four .modal-background {*/
-
-/*    background: rgba(0, 0, 0, 0.7);*/
-
-/*}*/
-
-/*.modal-container .four .modal-background .modal + .active .tilePara.modal-container {*/
-
-/*    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
-
-/*}*/
-
-/*.modal-container.four + .content {*/
-
-/*    z-index: 1;*/
-
-/*    animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
-
-/*}*/
-
-/*.modal-container.four.out .modal-background .modal {*/
-
-/*    animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
-
-/*}*/
-
-/*.modal-container.four.out + .content {*/
-
-/*    animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;*/
-
-/*}*/
-
 .blogTile.active {
-  /*transform: scale(2);*/
   -webkit-animation: blowUpContent 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
           animation: blowUpContent 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .tilePara.actives {
-  /*transform: scale(1);*/
   -webkit-animation: blowUpModal 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
           animation: blowUpModal 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .tilePara.outs {
-  /*minimizes tilePara*/
   -webkit-animation: blowUpModalTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
           animation: blowUpModalTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .blogTile.out {
-  /*to bring the blogTile back into view*/
   -webkit-animation: blowUpContentTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
           animation: blowUpContentTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-
-/*--------------------*/
-
-/*  MODAL CONTENT*/
-
-/*#modal-container .modal-background {*/
-
-/*    display: table-cell;*/
-
-/*    background: rgba(0, 0, 0, 0.8);*/
-
-/*    text-align: center;*/
-
-/*    vertical-align: middle;*/
-
-/*}*/
-
-/*#modal-container .modal-background .modal {*/
-
-/*    background: white;*/
-
-/*    padding: 50px;*/
-
-/*    display: inline-block;*/
-
-/*    border-radius: 3px;*/
-
-/*    font-weight: 300;*/
-
-/*    position: relative;*/
-
-/*}*/
-
-/*#modal-container .modal-background .modal h2 {*/
-
-/*    font-size: 25px;*/
-
-/*    line-height: 25px;*/
-
-/*    margin-bottom: 15px;*/
-
-/*}*/
-
-/*#modal-container .modal-background .modal p {*/
-
-/*    font-size: 18px;*/
-
-/*    line-height: 22px;*/
-
-/*}*/
-
-/*---------------------*/
-
-/*   NOT NEEDED ?*/
-
-/*#modal-container .modal-background .modal .modal-svg {*/
-
-/*    position: absolute;*/
-
-/*    top: 0;*/
-
-/*    left: 0;*/
-
-/*    height: 100%;*/
-
-/*    width: 100%;*/
-
-/*    border-radius: 3px;*/
-
-/*}*/
-
-/*#modal-container .modal-background .modal .modal-svg rect {*/
-
-/*    stroke: #fff;*/
-
-/*    stroke-width: 2px;*/
-
-/*    stroke-dasharray: 778;*/
-
-/*    stroke-dashoffset: 778;*/
-
-/*}*/
-
-/*.content {*/
-
-/*    min-height: 100%;*/
-
-/*    height: 100%;*/
-
-/*    background: white;*/
-
-/*    position: relative;*/
-
-/*    z-index: 0;*/
-
-/*}*/
-
-/*.content h1 {*/
-
-/*    padding: 75px 0 30px 0;*/
-
-/*    text-align: center;*/
-
-/*    font-size: 30px;*/
-
-/*    line-height: 30px;*/
-
-/*}*/
-
-/*--------------------*/
-
-/*.content .buttons {*/
-
-/*    max-width: 800px;*/
-
-/*    margin: 0 auto;*/
-
-/*    padding: 0;*/
-
-/*    text-align: center;*/
-
-/*}*/
-
-/*.content .buttons .button {*/
-
-/*    display: inline-block;*/
-
-/*    text-align: center;*/
-
-/*    padding: 10px 15px;*/
-
-/*    margin: 10px;*/
-
-/*    background: red;*/
-
-/*    font-size: 18px;*/
-
-/*    background-color: #efefef;*/
-
-/*    border-radius: 3px;*/
-
-/*    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);*/
-
-/*    cursor: pointer;*/
-
-/*}*/
-
-/*.content .buttons .button:hover {*/
-
-/*    color: white;*/
-
-/*    background: #009bd5;*/
-
-/*}*/
-
-/*---------------------*/
 
 @-webkit-keyframes blowUpContent {
   0% {
@@ -31702,6 +31467,45 @@ body .skill-i {
     transform: scale(0);
     opacity: 0;
   }
+}
+
+.image-tool__image-picture {
+  margin: auto;
+  width: 250px;
+}
+
+.code{
+  display: block;
+  margin: 5%;
+  padding: 5%;
+  background-color: black;
+  color: white;
+  font-family: monospace, monospace;
+}
+
+.inline-code {
+  /*margin: 5%;*/
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-family: monospace, monospace;
+  font-size: 80%;
+}
+
+.image-tool--large img {
+  width: 450px;
+}
+
+.image-tool--medium img {
+  width: 250px;
+}
+
+.image-tool--small img {
+  width: 150px;
+}
+
+.image-tool__caption{
+  display: none;
 }
 
 @media (min-width: 640px) {

@@ -1,197 +1,176 @@
 import EditorJS from "@editorjs/editorjs";
-import Header from "@editorjs/header";
-import Quote from "@editorjs/quote";
 import List from '@editorjs/list';
-
 import ImageTool from '@editorjs/image';
 import CodeTool from '@editorjs/code';
-import Marker from '@editorjs/marker';
 import Undo from 'editorjs-undo';
-import Paragraph from 'editorjs-paragraph-with-alignment';
-import FontSize from 'editorjs-inline-font-size-tool';
-
-// import $ from "jquery";
+import {StyleInlineTool} from '../../../editorjs-style/dist/index';
 
 const token = window.localStorage.getItem("api_token");
 const saveButton = document.getElementById('saveButton');
+const edit = document.getElementById('editorjs');
 
-const userDropDown = e => {
-    document.getElementById("userDropDown").classList.toggle("hidden");
-}
-
-// const editor = $("#editorjs") ? new EditorJS({
-//     holder: 'editorjs',
-//     tools: {
-//         header: Header,
-//         list: List,
-//         // quote: Quote,
-//         fontSize: FontSize,
-//         paragraph: {
-//             class: Paragraph,
-//             inlineToolbar: true
-//         },
-//         image: {
-//             class: ImageTool,
-//             config: {
-//                 actions: [
-//                     {
-//                         name: "resize",
-//                         icon: "<svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
-//                             "\t viewBox=\"0 0 317.215 317.215\" style=\"enable-background:new 0 0 317.215 317.215;\" xml:space=\"preserve\">\n" +
-//                             "<g>\n" +
-//                             "\t<path style=\"fill:#231F20;\" d=\"M309.715,1.107h-71.223c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h18.973\n" +
-//                             "\t\tl-57.129,57.127c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.197,5.303l14.143,14.143\n" +
-//                             "\t\tc1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.733,5.304-2.197l57.129-57.127V79.83c0,4.142,3.357,7.5,7.5,7.5h20\n" +
-//                             "\t\tc4.143,0,7.5-3.358,7.5-7.5V8.607C317.215,4.465,313.857,1.107,309.715,1.107z\"/>\n" +
-//                             "\t<path style=\"fill:#231F20;\" d=\"M59.75,36.107h18.973c4.143,0,7.5-3.358,7.5-7.5v-20c0-4.142-3.357-7.5-7.5-7.5H7.5\n" +
-//                             "\t\tc-4.143,0-7.5,3.358-7.5,7.5V79.83c0,4.142,3.357,7.5,7.5,7.5h20c4.143,0,7.5-3.358,7.5-7.5V60.857l57.125,57.126\n" +
-//                             "\t\tc1.465,1.464,3.385,2.197,5.305,2.197c1.919,0,3.839-0.733,5.305-2.197l14.142-14.143c1.406-1.406,2.196-3.314,2.196-5.303\n" +
-//                             "\t\tc0-1.989-0.79-3.897-2.196-5.303L59.75,36.107z\"/>\n" +
-//                             "\t<path style=\"fill:#231F20;\" d=\"M102.734,199.233c-2.93-2.929-7.678-2.929-10.609,0L35,256.358v-18.974c0-4.142-3.357-7.5-7.5-7.5\n" +
-//                             "\t\th-20c-4.143,0-7.5,3.358-7.5,7.5v71.223c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-20\n" +
-//                             "\t\tc0-4.142-3.357-7.5-7.5-7.5H59.75l57.126-57.125c1.406-1.406,2.196-3.314,2.196-5.303c0-1.989-0.79-3.897-2.196-5.303\n" +
-//                             "\t\tL102.734,199.233z\"/>\n" +
-//                             "\t<path style=\"fill:#231F20;\" d=\"M309.715,229.885h-20c-4.143,0-7.5,3.358-7.5,7.5v18.976l-57.13-57.127\n" +
-//                             "\t\tc-2.929-2.929-7.677-2.929-10.606,0l-14.143,14.143c-1.406,1.406-2.197,3.314-2.197,5.303c0,1.989,0.791,3.897,2.198,5.303\n" +
-//                             "\t\tl57.128,57.125h-18.973c-4.143,0-7.5,3.358-7.5,7.5v20c0,4.142,3.357,7.5,7.5,7.5h71.223c4.143,0,7.5-3.358,7.5-7.5v-71.223\n" +
-//                             "\t\tC317.215,233.243,313.857,229.885,309.715,229.885z\"/>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             // "<g>\n" +
-//                             // "</g>\n" +
-//                             "</svg>",
-//                         title: "Resize Image",
-//                         action: name => {
-//                             // alert(`${name} button clicked`);
-//                             // $(this).addClass("ui-widget-content");
-//                             $(".image-tool").resizable();
-//                             $(".image-tool").draggable();
-//                             return true;
-//                         }
-//                     }
-//                 ],
-//                 endpoints: {
-//                     byFile: '/api/upload', // Your backend file uploader endpoint
-//                     byUrl: '/api/upload_url', // Your endpoint that provides uploading by Url
-//                 },
-//                 additionalRequestHeaders: {"Authorization": `Bearer ${token}`}
-//             }
-//         },
-//         code: CodeTool,
-//         Marker: {
-//             class: Marker,
-//             shortcut: 'CMD+SHIFT+M',
-//         },
-//     },
-//     // autofocus: true,
-//     placeholder: "Come on, write something already!",
-//     onReady: () => {
-//         new Undo({editor});
-//     },
-// }) : null;
-
-if (saveButton) {
-    // console.log("save")
-    saveButton.addEventListener("click", () => {
-        editor.save()
-            .then(savedData => {
-                $.ajax({
-                    type: "POST",
-                    url: "/api/blog/create",
-                    headers: {"Authorization": `Bearer ${token}`},
-                    data: JSON.stringify({
-                        title: $("#blogTitle").text(),
-                        data: savedData
-                    }),
-                    contentType: "application/json",
-                    success: data => {
-                        console.log(data);
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("Saving error", error);
-            });
+$(document).ready(function () {
+    $("#user-menu").click(e => {
+        $("#userDropDown").toggleClass("hidden");
     })
-};
 
-if ($("#thirds")) {
-    $("#thirds").resizable();
-}
+    const editor = edit ? new EditorJS({
+        holder: 'editorjs',
+        tools: {
+            // list: List,
+            style: StyleInlineTool,
+            paragraph: {
+                // class: Paragraph,
+                inlineToolbar: ['style']
+            },
+            image: {
+                class: ImageTool,
+                config: {
+                    actions: [
+                        {
+                            name: "large",
+                            icon: "LG",
+                            title: "Large",
+                            action: x => {
+                                return true;
+                            }
+                        },
+                        {
+                            name: "medium",
+                            icon: "MD",
+                            title: "Medium",
+                            action: x => {
+                                return true;
+                            }
+                        },
+                        {
+                            name: "small",
+                            icon: "SM",
+                            title: "Small",
+                            action: x => {
+                                return true;
+                            }
+                        }
+                    ],
+                    endpoints: {
+                        byFile: '/api/upload', // Your backend file uploader endpoint
+                        byUrl: '/api/upload_url', // Your endpoint that provides uploading by Url
+                    },
+                    additionalRequestHeaders: {"Authorization": `Bearer ${token}`}
+                }
+            },
+            // code: CodeTool,
+        },
+        // autofocus: true,
+        placeholder: "Come on, write something already!",
+        onReady: () => {
+            new Undo({editor});
+        },
+    }) : null;
 
+    if (saveButton) {
+        saveButton.addEventListener("click", () => {
+            editor.save()
+                .then(savedData => {
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/blog/create",
+                        headers: {"Authorization": `Bearer ${token}`},
+                        data: JSON.stringify({
+                            title: $("#blogTitle").text(),
+                            img: $("#blogImgMain").attr("src"),
+                            data: savedData
+                        }),
+                        contentType: "application/json",
+                        success: data => {
+                            alert("success!")
+                            console.log(data);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error("Saving error", error);
+                });
+        })
+    }
 
+    $(".blogTile").each((index, element) => {
+        $(`#${element.id}`).click(e => {
+            e.preventDefault();
+            window.location.replace(`/blog/post/${element.id}`);
+        })
 
-$(".blogTile").each((index, element) => {
-    // let para = $(this);
-    // console.log(element.id);
-    // $(`#${element.id}`).hover(function (e) {
-    //     console.log(e);
-    //     console.log(`para${e.currentTarget.id}`);
-    //     $(`#para${e.currentTarget.id}`).removeClass("invisible");
-    // }, (e) => {
-    //     $(`#para${e.currentTarget.id}`).addClass("invisible");
-    // })
-
-
-
-    // $(`#${element.id}`).click (function(){
-    //     var buttonId = $(`#${element.id}`).attr("id");
-    //     $("#modal-container").removeAttr("class").addClass(buttonId);
-    //     $("body").addClass("modal-active");
-    // })
-
-
-    $(`#${element.id}`).hover(e => {
-        var buttonId = $(`#${element.id}`).attr("id");
-        $("#modal-container").removeAttr("class").addClass("four");
-        $("body").addClass("modal-active");
-    }, e => {
-        $(`#${element.id}`).addClass('out');
-        $('body').removeClass('modal-active');
+        $(`#${element.id}`).hover(e => {
+            // var buttonId = $(`#${element.id}`).attr("id");
+            $(`#${element.id}`).removeClass("out").addClass("active");
+            $(`#para-${element.id}`).removeClass("outs").addClass("actives");
+            $("body").addClass("modal-active");
+        }, e => {
+            $(`#${element.id}`).removeClass("active").addClass("out");
+            $(`#para-${element.id}`).removeClass("actives").addClass("outs");
+            $('body').removeClass('modal-active');
         });
 
 
-})
+    })
 
+    $(".button").click(function () {
+        $("#modal-container").removeAttr("class").addClass("four");
+        $("body").addClass("modal-active");
+    })
 
-
-$(".button").click(function(){
-    var buttonId = $(this).attr("id");
-    $("#modal-container").removeAttr("class").addClass("four");
-    $("body").addClass("modal-active");
-})
-
-$(".modal-container").click(function () {
-    // $(this).click(function(){
+    $(".modal-container").click(function () {
         $(this).addClass('out');
         $('body').removeClass('modal-active');
-    // });
-});
+    });
+
+
+    $("#sub").click(e => {
+        console.log($("#img"));
+
+        $.ajax({
+            type: "POST",
+            url: "/api/upload",
+            headers: {"Authorization": `Bearer ${token}`},
+            data: JSON.stringify({
+                title: $("#blogTitle").text(),
+                data: savedData
+            }),
+            contentType: "application/json",
+            success: data => {
+                console.log(data);
+            }
+        });
+    })
+
+
+    $("#blogImgMainUpload").click(function () {
+
+        const fd = new FormData();
+        const files = $('#blogImgMainFile')[0].files;
+
+        if (files.length > 0) {
+            fd.append("image", files[0]);
+
+            $.ajax({
+                url: "/api/upload",
+                type: "POST",
+                headers: {"Authorization": `Bearer ${token}`},
+                data: fd,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response != 0) {
+                        $("#blogImgMain").attr("src", response.file.url);
+                        $("#blogImgMain").removeClass("hidden");
+                    } else {
+                        alert('file not uploaded');
+                    }
+                },
+            });
+        } else {
+            alert("Please select a file.");
+        }
+    })
+})
 

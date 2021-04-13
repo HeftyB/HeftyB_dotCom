@@ -67,11 +67,12 @@ class AuthController extends Controller
     {
         $user = User::find(Auth::user()->getAuthIdentifier());
         $title = $request->input("title");
+        $img = $request->input("img");
         $blocks = $request->input("data.blocks");
 
         $blogPost = new BlogPost([
             "title" => $title,
-            "img" => "/test/testdir/test.jpeg"
+            "img" => $img
         ]);
 
         $elementList = array();
@@ -88,7 +89,7 @@ class AuthController extends Controller
 
             $e = new BlogElement([
                 "value" => $ret["value"],
-                "styles" => $ret["styles"],
+                "styles" => "styles",
                 "order" => $key,
                 "element_id" => $element->id
             ]);
@@ -149,7 +150,7 @@ class AuthController extends Controller
             case "paragraph":
                 $ret = [
                     "value" => $data["text"],
-                    "styles" => "text-".$data["alignment"]
+//                    "styles" => "text-".$data["alignment"]
                 ];
                 break;
             case "image":

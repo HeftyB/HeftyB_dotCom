@@ -1,13 +1,15 @@
-<div class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl" id="projects">
+<div
+    class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl"
+    id="projects">
     <div class="w-64 rounded-full overflow-hidden border-4 border-black">
-        <img src="https://apod.nasa.gov/apod/image/2103/Venus_Venera13_960.jpg" alt="image" />
+        <img src="https://apod.nasa.gov/apod/image/2103/Venus_Venera13_960.jpg" alt="image"/>
     </div>
     <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
         <div class="text-4xl text-center align-text-bottom p-6">
                         <span class="font-bold">
                             <strong>HeftyB.com</strong>
                         </span>
-            <hr />
+            <hr/>
             <span>
                             <small>This application!</small>
                         </span>
@@ -69,16 +71,17 @@
     </div>
 </div>
 
-<div class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
+<div
+    class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
     <div class="w-64 rounded-full overflow-hidden border-4 border-black">
-        <img src={nasa} alt="image" />
+        <img src={nasa} alt="image"/>
     </div>
     <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
         <div class="text-4xl text-center align-text-bottom p-6">
                         <span class="font-bold">
                             <strong>Citrics</strong>
                         </span>
-            <hr />
+            <hr/>
             <span>
                             <small>A city comparison application</small>
                         </span>
@@ -140,16 +143,17 @@
     </div>
 </div>
 
-<div class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
+<div
+    class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
     <div class="w-64 rounded-full overflow-hidden border-4 border-black">
-        <img src={nasa} alt="image" />
+        <img src={nasa} alt="image"/>
     </div>
     <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
         <div class="text-4xl text-center align-text-bottom p-6">
                         <span class="font-bold">
                             <strong>Super-Supper</strong>
                         </span>
-            <hr />
+            <hr/>
             <span>
                             <small>An application of miroservices to help manage meal time</small>
                         </span>
@@ -211,16 +215,17 @@
     </div>
 </div>
 
-<div class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
+<div
+    class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
     <div class="w-64 rounded-full overflow-hidden border-4 border-black">
-        <img src={nasa} alt="image" />
+        <img src={nasa} alt="image"/>
     </div>
     <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
         <div class="text-4xl text-center align-text-bottom p-6">
                         <span class="font-bold">
                             <strong>How-to</strong>
                         </span>
-            <hr />
+            <hr/>
             <span>
                             <small>Browse, post, and vote on life-hacks!</small>
                         </span>

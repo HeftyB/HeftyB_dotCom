@@ -10,10 +10,10 @@
     <link href="{{ asset("../../css/app.css") }}" rel="stylesheet">
 
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 font-serif">
 <x-nav/>
-<div class="my-0 mx-auto bg-white w-5/6">
-    <div class="container mx-auto">
+<div class="my-0 mx-auto bg-white w-11/12 py-2">
+    <div class="container mx-auto w-11/12">
         @yield("content")
     </div>
 </div>

@@ -1,4 +1,6 @@
-<div style="height:36px;width:100px;" class="mx-auto px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700" onclick="window.location='/auth/redirect'">
+<div style="height:36px;width:100px;"
+     class="mx-auto px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+     onclick="window.location='/auth/redirect'">
     <div class="flex justify-between">
         <div class="flex items-center">
             <div style="width:18px;height:18px;"
