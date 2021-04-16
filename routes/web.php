@@ -21,7 +21,7 @@ use Laravel\Socialite\Facades\Socialite;
 //    return view('welcome');
 //});
 
-Route::get("/", [MainController::class, "index"])->name("login");
+Route::get("/", [MainController::class, "index"]);
 
 Route::get("/blog", [MainController::class, "blog"]);
 Route::get("/blog/post/{id}", [MainController::class, "blogPost"]);
@@ -34,7 +34,7 @@ Route::get('/auth/redirect', [AuthController::class, "redirect"]);
 
 Route::get('/auth/google/callback', [AuthController::class, "callback"]);
 
-Route::get('/logout', [AuthController::class, "logout"]);
+Route::get('/logout', [AuthController::class, "logout"])->name("login");
 
 Route::get("/dashboard", [AuthController::class, "dashboard"])->middleware("auth")->name("dashboard");
 
