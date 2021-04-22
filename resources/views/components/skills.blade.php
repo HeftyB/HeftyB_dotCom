@@ -212,22 +212,22 @@
         <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
             <img
                 class="w-3/12 justify-center"
-                src="https://cdn.svgporn.com/logos/html-5.svg"
-                alt="HTML5"
+                src="https://cdn.svgporn.com/logos/laravel.svg"
+                alt="Laravel"
             />
             <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">HTML-5</div>
+                <div class="font-extrabold text-2xl mb-2">Laravel</div>
             </div>
         </div>
 
         <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
             <img
                 class="w-3/12 justify-center"
-                src="https://cdn.svgporn.com/logos/html-5.svg"
-                alt="HTML5"
+                src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg"
+                alt="Tailwind CSS"
             />
             <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">HTML-5</div>
+                <div class="font-extrabold text-xl mb-2">Tailwind-CSS</div>
             </div>
         </div>
     </div>

@@ -16,12 +16,14 @@ class CreateBlogElementsTable extends Migration
         Schema::create('blog_elements', function (Blueprint $table) {
             $table->id();
             $table->text("value");
-            $table->string("styles");
+            $table->string("class");
+            $table->string("img_caption")->nullable();
             $table->integer("order");
-            $table->foreignId('element_id')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+//            $table->foreignId('element_id')
+//                ->constrained()
+//                ->onUpdate('cascade')
+//                ->onDelete('cascade');
+            $table->boolean("img_flag")->nullable();
             $table->foreignId('blog_post_id')
                 ->constrained()
                 ->onUpdate('cascade')

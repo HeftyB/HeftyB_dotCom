@@ -13,13 +13,13 @@ class CreateElementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('elements', function (Blueprint $table) {
-            $table->id();
-            $table->string("name");
-            $table->string("tag");
-//            $table->string("close_tag");
-            $table->timestamps();
-        });
+//        Schema::create('elements', function (Blueprint $table) {
+//            $table->id();
+//            $table->string("name");
+//            $table->string("tag");
+////            $table->string("close_tag");
+//            $table->timestamps();
+//        });
     }
 
     /**
@@ -29,6 +29,6 @@ class CreateElementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('elements');
+//        Schema::dropIfExists('elements');
     }
 }
