@@ -14,6 +14,16 @@ module.exports = {
             roman: 'upper-roman',
         },
         extend: {
+            keyframes: {
+                shakes: {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(90deg)' }
+                }
+            },
+            animation: {
+                shakes: "shakes 0.5s ease-in-out infinite alternate",
+                "ping-slow": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite"
+            },
             scale: {
                 '-1': '-1'
             }
