@@ -3,13 +3,17 @@ import List from '@editorjs/list';
 import ImageTool from '@editorjs/image';
 import CodeTool from '@editorjs/code';
 import Undo from 'editorjs-undo';
-import {StyleInlineTool} from '../../../editorjs-style/dist/index';
-
-const token = window.localStorage.getItem("api_token");
-const saveButton = document.getElementById('saveButton');
-const edit = document.getElementById('editorjs');
+import {StyleInlineTool} from './dist/index';
+import Paragraph from 'editorjs-paragraph-with-alignment';
+import Marker from '@editorjs/marker';
+import Underline from '@editorjs/underline';
+import AlignmentTuneTool from 'editorjs-text-alignment-blocktune';
 
 $(document).ready(function () {
+    const token = window.localStorage.getItem("api_token");
+    const saveButton = document.getElementById('saveButton');
+    const edit = document.getElementById('editorjs');
+
     $("#user-menu").click(e => {
         $("#userDropDown").toggleClass("hidden");
     })
@@ -17,11 +21,13 @@ $(document).ready(function () {
     const editor = edit ? new EditorJS({
         holder: 'editorjs',
         tools: {
-            // list: List,
             style: StyleInlineTool,
+            underline: Underline,
             paragraph: {
-                // class: Paragraph,
-                inlineToolbar: ['style']
+                class: Paragraph,
+                inlineToolbar: ["bold", "italic", "underline", "style"],
+                preserveBlank: true,
+                // tunes: ['alignTune']
             },
             image: {
                 class: ImageTool,
@@ -58,10 +64,8 @@ $(document).ready(function () {
                     },
                     additionalRequestHeaders: {"Authorization": `Bearer ${token}`}
                 }
-            },
-            // code: CodeTool,
+            }
         },
-        // autofocus: true,
         placeholder: "Come on, write something already!",
         onReady: () => {
             new Undo({editor});
@@ -77,7 +81,7 @@ $(document).ready(function () {
                         url: "/api/blog/create",
                         headers: {"Authorization": `Bearer ${token}`},
                         data: JSON.stringify({
-                            title: $("#blogTitle").text(),
+                            title: $("#blogTitle").val(),
                             img: $("#blogImgMain").attr("src"),
                             data: savedData
                         }),
@@ -94,58 +98,34 @@ $(document).ready(function () {
         })
     }
 
-    $(".blogTile").each((index, element) => {
-        $(`#${element.id}`).click(e => {
-            e.preventDefault();
-            window.location.replace(`/blog/post/${element.id}`);
-        })
 
-        $(`#${element.id}`).hover(e => {
-            // var buttonId = $(`#${element.id}`).attr("id");
-            $(`#${element.id}`).removeClass("out").addClass("active");
-            $(`#para-${element.id}`).removeClass("outs").addClass("actives");
-            $("body").addClass("modal-active");
-        }, e => {
-            $(`#${element.id}`).removeClass("active").addClass("out");
-            $(`#para-${element.id}`).removeClass("actives").addClass("outs");
-            $('body').removeClass('modal-active');
-        });
-
-
-    })
-
-    $(".button").click(function () {
-        $("#modal-container").removeAttr("class").addClass("four");
-        $("body").addClass("modal-active");
-    })
-
-    $(".modal-container").click(function () {
-        $(this).addClass('out');
-        $('body').removeClass('modal-active');
-    });
+    /*
+    hover modal for blog tiles
+     */
+    // $(".blogTile").each((index, element) => {
+    //     $(`#${element.id}`).click(e => {
+    //         e.preventDefault();
+    //         // window.location.replace(`/blog/post/${element.id}`);
+    //     })
+    //     $(`#${element.id}`).hover(e => {
+    //         // var buttonId = $(`#${element.id}`).attr("id");
+    //         // $(`#${element.id}`).removeClass("out").addClass("active");
+    //
+    //         // $(`#para-${element.id}`).removeClass("outs").addClass("actives");
+    //         $(`#para-${element.id}`).removeClass("animate-blowUpModalTwo").addClass("animate-blowUpModal");
+    //         $("body").addClass("modal-active");
+    //     }, e => {
+    //         // $(`#${element.id}`).removeClass("active").addClass("out");
+    //
+    //         // $(`#para-${element.id}`).removeClass("actives").addClass("outs");
+    //         $(`#para-${element.id}`).removeClass("animate-blowUpModal").addClass("animate-blowUpModalTwo");
+    //         $("body").removeClass("modal-active");
+    //     })
+    // })
 
 
-    $("#sub").click(e => {
-        console.log($("#img"));
 
-        $.ajax({
-            type: "POST",
-            url: "/api/upload",
-            headers: {"Authorization": `Bearer ${token}`},
-            data: JSON.stringify({
-                title: $("#blogTitle").text(),
-                data: savedData
-            }),
-            contentType: "application/json",
-            success: data => {
-                console.log(data);
-            }
-        });
-    })
-
-
-    $("#blogImgMainUpload").click(function () {
-
+    $("#blogImgMainFile").change(function () {
         const fd = new FormData();
         const files = $('#blogImgMainFile')[0].files;
 
@@ -169,8 +149,80 @@ $(document).ready(function () {
                 },
             });
         } else {
-            alert("Please select a file.");
+            alert("Please select a file");
         }
     })
+
+    $("#infoFormHeader").click(function () {
+        $("#infoFormIcon").toggleClass("bg-gray-700");
+        $("#blogFormInfo").toggleClass("hidden");
+    })
+
+    $("#userFiledHeader").click(function () {
+        $("#filedIcon").toggleClass("bg-blue-500");
+        $("#userFiled").toggleClass("hidden");
+    })
+
+    $(".userFile").each((index, element) => {
+        const path = $(`#p${element.id}`).text()
+        $(`#d${element.id}`).click(function (e) {
+            $.ajax({
+                url: `/api/delete`,
+                type: "DELETE",
+                headers: {"Authorization": `Bearer ${token}`},
+                data: {"path": path, "id": element.id.replace("f", "")},
+                success: function (response) {
+                    $(`#${element.id}`).addClass("bg-red-500");
+                    $(`#${element.id}`).find(".fileName").text("DELETED");
+                    $(`#${element.id}`).find(".paths").text("DELETED");
+                    $(`#${element.id}`).find(".fileActive").text("DELETED").removeClass("bg-green-100").addClass("bg-red-500");
+                    $(`#${element.id}`).addClass("hidden");
+
+                    let t = $("#fileCount").text();
+                    t = parseInt(t);
+                    t--;
+                    $("#fileCount").text(t);
+                }
+            })
+        })
+
+        $(`#i${element.id}`).click(function () {
+            let s = $(this).attr("src");
+            $("#userFileModal").attr("src", s);
+            $("#imgModal").toggleClass("hidden");
+        })
+    })
+
+    /**
+     * Jquery animation just because why not
+     */
+    $("#dashWelcome").delay(1500).animate({
+        display: "show",
+        width: "50%",
+        height: "100%"
+
+    }, "slow", "linear", function () {
+        $(this).show();
+    })
+
+    /**
+     * Modal functions
+     */
+
+    $("#imgModal").click(function () {
+        $(this).toggleClass("hidden");
+    })
+
+    $("#blogModal").click(e => {
+        e.stopPropagation();
+    })
+
+    $("#closeTitleButton").click(function () {
+        $("#imgModal").toggleClass("hidden");
+    })
+    $("#tiButton").click(function () {
+        $("#imgModal").toggleClass("hidden");
+    })
+
 })
 
