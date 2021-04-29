@@ -23,8 +23,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return response()->json($request);
 //});
 
-Route::middleware('auth:api')->post("/blog/create", [AuthController::class, "createBlogPost"]);
+Route::middleware('auth:api')->post("/blog/create", [AuthController::class, "saveBlogPost"]);
 
 Route::middleware('auth:api')->post("/upload", [AuthController::class, "uploadImg"]);
 
 Route::middleware('auth:api')->post("/upload_url", [AuthController::class, "uploadURL"]);
+Route::middleware('auth:api')->delete("/delete", [AuthController::class, "deleteFile"]);
+
+Route::middleware('auth:api')->put("/blog/update/{id}", [AuthController::class, "saveBlogPost"]);
