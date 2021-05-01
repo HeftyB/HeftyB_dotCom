@@ -2,7 +2,6 @@
 
 
 @section("content")
-
     <div class="text-6xl text-center bg-black text-white my-4 p-6">
         <x-hefty-blog-logo/>
     </div>
@@ -16,6 +15,4 @@
             <x-blog_tile :blogPost="$blogPost" :num="$loop->iteration"/>
         @endforeach
     </div>
-
-
 @endsection
