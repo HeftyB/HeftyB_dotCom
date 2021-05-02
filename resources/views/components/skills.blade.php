@@ -3,31 +3,10 @@
         Development Technologies:
     </h3>
     <div class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
-            <img
-                class="w-3/12 justify-center"
-                src="https://cdn.svgporn.com/logos/html-5.svg"
-                alt="HTML5"
-            />
-            <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">HTML-5</div>
-            </div>
-        </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
-                src="https://cdn.svgporn.com/logos/css-3.svg"
-                alt="CSS-3"
-            />
-            <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">CSS-3</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
-            <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/javascript.svg"
                 alt="JS"
             />
@@ -38,9 +17,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
                 alt="React"
             />
@@ -49,9 +28,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/redux.svg"
                 alt="Redux"
             />
@@ -60,7 +39,29 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
+            <img
+                class="w-12 justify-center"
+                src="https://cdn.svgporn.com/logos/html-5.svg"
+                alt="HTML5"
+            />
+            <div class="px-6 py-4">
+                <div class="font-extrabold text-2xl mb-2">HTML-5</div>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
+            <img
+                class="w-12 justify-center"
+                src="https://cdn.svgporn.com/logos/css-3.svg"
+                alt="CSS-3"
+            />
+            <div class="px-6 py-4">
+                <div class="font-extrabold text-2xl mb-2">CSS-3</div>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
                 class="w-3/12 justify-center"
                 src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"
@@ -71,22 +72,22 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/spring.svg"
                 alt="Spring Boot"
             />
             <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">
-                    Spring Boot
+                <div class="font-extrabold text-xl mb-2">
+                    Spring-Boot
                 </div>
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/postgresql.svg"
                 alt="PostGreSQL"
             />
@@ -97,9 +98,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/nodejs.svg"
                 alt="Node"
             />
@@ -108,9 +109,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/mongodb.svg"
                 alt="MongoDB"
             />
@@ -119,9 +120,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-128.png"
                 alt="Python"
             />
@@ -130,9 +131,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/flask.svg"
                 alt="Flask"
             />
@@ -141,9 +142,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/bootstrap.svg"
                 alt="Bootstrap"
             />
@@ -154,9 +155,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/docker-icon.svg"
                 alt="Docker"
             />
@@ -165,9 +166,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/linux-tux.svg"
                 alt="Tux"
             />
@@ -176,31 +177,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
-                src="https://cdn.svgporn.com/logos/apache.svg"
-                alt="Apache"
-            />
-            <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">Apache</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
-            <img
-                class="w-3/12 justify-center"
-                src="https://cdn.svgporn.com/logos/mysql.svg"
-                alt="MySQL"
-            />
-            <div class="px-6 py-4">
-                <div class="font-extrabold text-2xl mb-2">MySQL</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
-            <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/php.svg"
                 alt="PHP"
             />
@@ -209,9 +188,9 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/laravel.svg"
                 alt="Laravel"
             />
@@ -220,14 +199,36 @@
             </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100">
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
             <img
-                class="w-3/12 justify-center"
+                class="w-12 justify-center"
                 src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg"
                 alt="Tailwind CSS"
             />
             <div class="px-6 py-4">
                 <div class="font-extrabold text-xl mb-2">Tailwind-CSS</div>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
+            <img
+                class="w-10 justify-center"
+                src="https://cdn.svgporn.com/logos/apache.svg"
+                alt="Apache"
+            />
+            <div class="px-6 py-4">
+                <div class="font-extrabold text-2xl mb-2">Apache</div>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
+            <img
+                class="w-12 justify-center"
+                src="https://cdn.svgporn.com/logos/mysql.svg"
+                alt="MySQL"
+            />
+            <div class="px-6 py-4">
+                <div class="font-extrabold text-2xl mb-2">MySQL</div>
             </div>
         </div>
     </div>
