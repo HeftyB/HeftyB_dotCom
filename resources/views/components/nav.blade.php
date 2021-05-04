@@ -11,7 +11,8 @@
                     href="/blog">Blog</a></div>
         </div>
 
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 cursor-pointer">
+        <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 cursor-pointer">
             @if (\Illuminate\Support\Facades\Auth::check())
                 <div class="ml-3 relative">
                     <div>
@@ -19,12 +20,12 @@
                             class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                             id="user-menu"
                             aria-haspopup="true">
-                        <span class="sr-only">Open user menu</span>
-                        <img
-                            class="h-8 w-8 rounded-full"
-                            src="{{ \Illuminate\Support\Facades\Auth::user()->avatar }}"
-                            alt=""
-                        />
+                            <span class="sr-only">Open user menu</span>
+                            <img
+                                class="h-8 w-8 rounded-full"
+                                src="{{ \Illuminate\Support\Facades\Auth::user()->avatar }}"
+                                alt=""
+                            />
                         </button>
                     </div>
                     <div

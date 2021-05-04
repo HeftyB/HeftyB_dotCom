@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Element;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -49,10 +49,10 @@ class DatabaseSeeder extends Seeder
 //            "tag" => "div class='codeBlock'"
 //        ]);
 
-        Element::create([
-            "name" => "list",
-            "tag" => "ol"
-        ]);
+//        Element::create([
+//            "name" => "list",
+//            "tag" => "ol"
+//        ]);
 
         // \App\Models\User::factory(10)->create();
     }

@@ -70,7 +70,7 @@
         background-color: #f9f7f1;
     }
 
-    .code{
+    .code {
         display: block;
         margin: 5%;
         padding: 5%;
@@ -89,7 +89,7 @@
     }
 
     .marker {
-        background: rgba(245,235,111,0.29);
+        background: rgba(245, 235, 111, 0.29);
         padding: 3px 0;
     }
 
@@ -134,11 +134,6 @@
     .image-tool--small img {
         width: 150px;
     }
-}
-
-* {
-    /*border: 1px solid black;*/
-    /*box-sizing: border-box;*/
 }
 
 #ddpic {

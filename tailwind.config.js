@@ -16,16 +16,16 @@ module.exports = {
         extend: {
             keyframes: {
                 shakes: {
-                    '0%': { transform: 'rotate(0deg)' },
-                    '100%': { transform: 'rotate(90deg)' }
+                    '0%': {transform: 'rotate(0deg)'},
+                    '100%': {transform: 'rotate(90deg)'}
                 },
                 blowUpModal: {
-                    '0%': { transform: 'scale(0)', opacity: '0' },
-                    '100%': { transform: 'scale(1)', opacity: '1' }
+                    '0%': {transform: 'scale(0)', opacity: '0'},
+                    '100%': {transform: 'scale(1)', opacity: '1'}
                 },
-                blowUpModalTwo : {
-                    '0%': { transform: 'scale(1)', opacity: '1' },
-                    '100%': { transform: 'scale(0)', opacity: '0' }
+                blowUpModalTwo: {
+                    '0%': {transform: 'scale(1)', opacity: '1'},
+                    '100%': {transform: 'scale(0)', opacity: '0'}
                 }
             },
             animation: {
@@ -42,5 +42,7 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/line-clamp')
+    ],
 }

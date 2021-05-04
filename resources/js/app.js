@@ -1,18 +1,23 @@
 import EditorJS from "@editorjs/editorjs";
-import List from '@editorjs/list';
 import ImageTool from '@editorjs/image';
-import CodeTool from '@editorjs/code';
 import Undo from 'editorjs-undo';
 import {StyleInlineTool} from './dist/index';
 import Paragraph from 'editorjs-paragraph-with-alignment';
-import Marker from '@editorjs/marker';
 import Underline from '@editorjs/underline';
-import AlignmentTuneTool from 'editorjs-text-alignment-blocktune';
+import axios from 'axios';
 
 $(document).ready(function () {
     const token = window.localStorage.getItem("api_token");
     const saveButton = document.getElementById('saveButton');
     const edit = document.getElementById('editorjs');
+
+    $(document)
+        .ajaxStart(function () {
+            $("#loadingModal").removeClass("hidden");
+        })
+        .ajaxStop(function () {
+            $("#loadingModal").addClass("hidden");
+        })
 
     $("#user-menu").click(e => {
         $("#userDropDown").toggleClass("hidden");
@@ -66,6 +71,7 @@ $(document).ready(function () {
                 }
             }
         },
+        data: data ? data : null,
         placeholder: "Come on, write something already!",
         onReady: () => {
             new Undo({editor});
@@ -86,9 +92,8 @@ $(document).ready(function () {
                             data: savedData
                         }),
                         contentType: "application/json",
-                        success: data => {
-                            alert("success!")
-                            console.log(data);
+                        success: res => {
+                            window.location.assign("/dashboard");
                         }
                     });
                 })
@@ -98,6 +103,38 @@ $(document).ready(function () {
         })
     }
 
+    $("#edUpdate").click(function () {
+        editor.save()
+            .then(savedData => {
+                $.ajax({
+                    type: "PUT",
+                    url: `/api/blog/update/${ids}`,
+                    headers: {"Authorization": `Bearer ${token}`},
+                    data: JSON.stringify({
+                        data: savedData
+                    }),
+                    contentType: "application/json",
+                    success: res => {
+                        $("#loadingModal").removeClass("hidden");
+                        window.location.assign("/dashboard");
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Saving error", error);
+            });
+    })
+
+    $("#edDelete").click(() => {
+        axios.delete(`/blog/delete/${ids}`)
+            .then(res => {
+                $("#loadingModal").removeClass("hidden");
+                window.location.assign("/dashboard");
+            })
+            .catch(res => {
+                debugger;
+            })
+    })
 
     /*
     hover modal for blog tiles
@@ -122,8 +159,6 @@ $(document).ready(function () {
     //         $("body").removeClass("modal-active");
     //     })
     // })
-
-
 
     $("#blogImgMainFile").change(function () {
         const fd = new FormData();
@@ -159,7 +194,7 @@ $(document).ready(function () {
     })
 
     $("#userFiledHeader").click(function () {
-        $("#filedIcon").toggleClass("bg-blue-500");
+        $("#filedIcon").toggleClass("bg-black");
         $("#userFiled").toggleClass("hidden");
     })
 
@@ -220,9 +255,17 @@ $(document).ready(function () {
     $("#closeTitleButton").click(function () {
         $("#imgModal").toggleClass("hidden");
     })
+
     $("#tiButton").click(function () {
         $("#imgModal").toggleClass("hidden");
     })
 
+    $("#wProjectsButton").click(function () {
+        window.location.assign("/#projects");
+    })
+
+    $("#githubButton").click(function () {
+        window.location.href = "https://www.github.com/heftyb";
+    })
 })
 

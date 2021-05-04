@@ -1,10 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\MainController;
-use \App\Http\Controllers\AuthController;
-
-use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,16 +15,11 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::get("/", [MainController::class, "index"]);
 
-
-
-
 Route::get("/contact", [MainController::class, "contact"]);
+Route::get("/privacy", [MainController::class, "privacy"]);
+Route::get("/tos", [MainController::class, "tos"]);
 Route::get("/login", [MainController::class, "login"]);
 Route::get('/logout', [AuthController::class, "logout"])->name("login");
 
@@ -43,7 +36,3 @@ Route::get("/blog/edit/{id}", [AuthController::class, "editPost"])->middleware("
 Route::delete("/blog/delete/{id}", [AuthController::class, "deletePost"])->middleware("auth");
 
 Route::post("/upload", [AuthController::class, "uploadImg"])->middleware("auth");
-
-Route::get("/test", function () {
-    return view("test");
-});

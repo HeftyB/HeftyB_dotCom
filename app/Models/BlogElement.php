@@ -11,9 +11,10 @@ class BlogElement extends Model
 
     protected $fillable = [
         'value',
-        'styles',
+        'class',
         'order',
-        'element_id',
+        'img_caption',
+        'img_flag',
         'blog_post_id'
     ];
 
@@ -22,8 +23,4 @@ class BlogElement extends Model
         return $this->belongsTo(BlogPost::class);
     }
 
-    public function element()
-    {
-        return $this->hasOne(Element::class);
-    }
 }

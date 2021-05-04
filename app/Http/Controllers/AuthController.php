@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogElement;
+use App\Models\BlogPost;
 use App\Models\Element;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use App\Models\UserFile;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
-use App\Models\User;
-use App\Models\BlogPost;
-use App\Models\BlogElement;
-use App\Models\UserFile;
 
 class AuthController extends Controller
 {
@@ -308,7 +305,7 @@ class AuthController extends Controller
                 "type" => "image",
                 "data" => [
                     "file" => [
-                        "url" => $el->value
+                        "url" => "/blog/" . $el->value
                     ],
                     "caption" => $el->img_caption,
                     "withBorder" => $border,

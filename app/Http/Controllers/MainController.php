@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Laravel\Socialite\Facades\Socialite;
 
 class MainController extends Controller
 {
@@ -18,7 +15,7 @@ class MainController extends Controller
 
     public function blog()
     {
-        $blogPosts = \App\Models\BlogPost::all();
+        $blogPosts = \App\Models\BlogPost::orderBy("id", "desc")->paginate(13);
 
         return view("blog_home",
             ["blogPosts" => $blogPosts]);
@@ -39,6 +36,16 @@ class MainController extends Controller
     public function contact()
     {
         return view("contact");
+    }
+
+    public function privacy()
+    {
+        return view("privacy");
+    }
+
+    public function tos()
+    {
+        return view("tos");
     }
 
     public function login()
