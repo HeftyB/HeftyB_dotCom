@@ -1,2 +1,2 @@
 # www.HeftyB.com #
-### A work in progress ###
+### My part of the world wide web to showcase projects and thoughts ###
