@@ -3,7 +3,7 @@
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl"
         id="projects">
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/w7VMvXQMUIj4Eck6fB1tS1m6xqtbRm1G1FF3P1pT.png" alt="HeftyB.com image"
+            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
@@ -85,7 +85,7 @@
         {{--        <img src={nasa} alt="image"/>--}}
         {{--    </div>--}}
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/w7VMvXQMUIj4Eck6fB1tS1m6xqtbRm1G1FF3P1pT.png" alt="HeftyB.com image"
+            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
@@ -163,7 +163,7 @@
     <div
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/w7VMvXQMUIj4Eck6fB1tS1m6xqtbRm1G1FF3P1pT.png" alt="HeftyB.com image"
+            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
@@ -242,7 +242,7 @@
     <div
         class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/w7VMvXQMUIj4Eck6fB1tS1m6xqtbRm1G1FF3P1pT.png" alt="HeftyB.com image"
+            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
