@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.29ea6390.chunk.css",
-    "main.js": "/static/js/main.35c47414.chunk.js",
-    "main.js.map": "/static/js/main.35c47414.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.49cb0d3e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.49cb0d3e.js.map",
-    "static/css/2.62699f74.chunk.css": "/static/css/2.62699f74.chunk.css",
-    "static/js/2.60ee29d9.chunk.js": "/static/js/2.60ee29d9.chunk.js",
-    "static/js/2.60ee29d9.chunk.js.map": "/static/js/2.60ee29d9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.72d48d42724c1459e097418c3382318b.js": "/precache-manifest.72d48d42724c1459e097418c3382318b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.62699f74.chunk.css.map": "/static/css/2.62699f74.chunk.css.map",
-    "static/css/main.29ea6390.chunk.css.map": "/static/css/main.29ea6390.chunk.css.map",
-    "static/js/2.60ee29d9.chunk.js.LICENSE.txt": "/static/js/2.60ee29d9.chunk.js.LICENSE.txt",
-    "static/media/okta-sign-in.min.css": "/static/media/yubikeyDemo.f10c9db1.png"
+    "main.css": "/citrics/static/css/main.29ea6390.chunk.css",
+    "main.js": "/citrics/static/js/main.401de633.chunk.js",
+    "main.js.map": "/citrics/static/js/main.401de633.chunk.js.map",
+    "runtime-main.js": "/citrics/static/js/runtime-main.b0fab350.js",
+    "runtime-main.js.map": "/citrics/static/js/runtime-main.b0fab350.js.map",
+    "static/css/2.75223fe3.chunk.css": "/citrics/static/css/2.75223fe3.chunk.css",
+    "static/js/2.8449e4a8.chunk.js": "/citrics/static/js/2.8449e4a8.chunk.js",
+    "static/js/2.8449e4a8.chunk.js.map": "/citrics/static/js/2.8449e4a8.chunk.js.map",
+    "index.html": "/citrics/index.html",
+    "precache-manifest.279c39fa5124c73110e4e309cee95383.js": "/citrics/precache-manifest.279c39fa5124c73110e4e309cee95383.js",
+    "service-worker.js": "/citrics/service-worker.js",
+    "static/css/2.75223fe3.chunk.css.map": "/citrics/static/css/2.75223fe3.chunk.css.map",
+    "static/css/main.29ea6390.chunk.css.map": "/citrics/static/css/main.29ea6390.chunk.css.map",
+    "static/js/2.8449e4a8.chunk.js.LICENSE.txt": "/citrics/static/js/2.8449e4a8.chunk.js.LICENSE.txt",
+    "static/media/okta-sign-in.min.css": "/citrics/static/media/yubikeyDemo.f10c9db1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.49cb0d3e.js",
-    "static/css/2.62699f74.chunk.css",
-    "static/js/2.60ee29d9.chunk.js",
+    "static/js/runtime-main.b0fab350.js",
+    "static/css/2.75223fe3.chunk.css",
+    "static/js/2.8449e4a8.chunk.js",
     "static/css/main.29ea6390.chunk.css",
-    "static/js/main.35c47414.chunk.js"
+    "static/js/main.401de633.chunk.js"
   ]
 }

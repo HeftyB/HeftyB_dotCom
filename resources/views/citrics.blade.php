@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
+{{--    <link rel="icon" href="/citrics/lime.png"/>--}}
+
     <link rel="icon" href="{{ asset('react/citrics/lime.png') }}"/>
+
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="theme-color" content="#000000"/>
     <meta name="description" content="Web site created using create-react-app"/>
-    <link rel="apple-touch-icon" href="/logo192.png"/>
+    <link rel="apple-touch-icon" href="/citrics/logo192.png"/>
+{{--    <link rel="manifest" href="/citrics/manifest.json"/>--}}
+
     <link rel="manifest" href="{{ asset('react/citrics/manifest.json') }}"/>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&family=Quicksand:wght@500&display=swap"
         rel="stylesheet">
-    <title>Citirics</title>
-{{--    <link href="/static/css/2.62699f74.chunk.css" rel="stylesheet">--}}
-{{--    <link href="/static/css/main.29ea6390.chunk.css" rel="stylesheet">--}}
-    <link href="{{ asset('react/citrics/static/css/2.62699f74.chunk.css') }}" rel="stylesheet">
+    <title>Citrics</title>
+{{--    <link href="/citrics/static/css/2.75223fe3.chunk.css" rel="stylesheet">--}}
+{{--    <link href="/citrics/static/css/main.29ea6390.chunk.css" rel="stylesheet">--}}
+
+    <link href="{{ asset('react/citrics/static/css/2.75223fe3.chunk.css') }}" rel="stylesheet">
     <link href="{{ asset('react/citrics/static/css/main.29ea6390.chunk.css') }}" rel="stylesheet">
 
 </head>
@@ -23,17 +30,17 @@
 <div id="root"></div>
 <script>!function (e) {
         function r(r) {
-            for (var n, i, l = r[0], c = r[1], f = r[2], p = 0, s = []; p < l.length; p++) i = l[p], Object.prototype.hasOwnProperty.call(o, i) && o[i] && s.push(o[i][0]), o[i] = 0;
-            for (n in c) Object.prototype.hasOwnProperty.call(c, n) && (e[n] = c[n]);
+            for (var n, i, c = r[0], l = r[1], f = r[2], p = 0, s = []; p < c.length; p++) i = c[p], Object.prototype.hasOwnProperty.call(o, i) && o[i] && s.push(o[i][0]), o[i] = 0;
+            for (n in l) Object.prototype.hasOwnProperty.call(l, n) && (e[n] = l[n]);
             for (a && a(r); s.length;) s.shift()();
             return u.push.apply(u, f || []), t()
         }
 
         function t() {
             for (var e, r = 0; r < u.length; r++) {
-                for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
-                    var c = t[l];
-                    0 !== o[c] && (n = !1)
+                for (var t = u[r], n = !0, c = 1; c < t.length; c++) {
+                    var l = t[c];
+                    0 !== o[l] && (n = !1)
                 }
                 n && (u.splice(r--, 1), e = i(i.s = t[0]))
             }
@@ -72,16 +79,19 @@
             return i.d(r, "a", r), r
         }, i.o = function (e, r) {
             return Object.prototype.hasOwnProperty.call(e, r)
-        }, i.p = "/";
-        var l = this.webpackJsonpcitrics = this.webpackJsonpcitrics || [], c = l.push.bind(l);
-        l.push = r, l = l.slice();
-        for (var f = 0; f < l.length; f++) r(l[f]);
-        var a = c;
+        }, i.p = "/citrics/";
+        var c = this.webpackJsonpcitrics = this.webpackJsonpcitrics || [], l = c.push.bind(c);
+        c.push = r, c = c.slice();
+        for (var f = 0; f < c.length; f++) r(c[f]);
+        var a = l;
         t()
     }([])</script>
-{{--<script src="/static/js/2.60ee29d9.chunk.js"></script>--}}
-{{--<script src="/static/js/main.35c47414.chunk.js"></script>--}}
-<script src="{{ asset('react/citrics/static/js/2.60ee29d9.chunk.js') }}"></script>
-<script src="{{ asset('react/citrics/static/js/main.35c47414.chunk.js') }}"></script>
+{{--<script src="/citrics/static/js/2.8449e4a8.chunk.js"></script>--}}
+{{--<script src="/citrics/static/js/main.401de633.chunk.js"></script>--}}
+
+<script src="{{ asset('react/citrics/static/js/2.8449e4a8.chunk.js') }}"></script>
+<script src="{{ asset('react/citrics/static/js/main.401de633.chunk.js') }}"></script>
+
 </body>
 </html>
+
