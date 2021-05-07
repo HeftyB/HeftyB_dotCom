@@ -78,6 +78,6 @@
 {{--<script src="/static/js/2.e3f38e0f.chunk.js"></script>--}}
 <script src="{{ asset('react/howto/static/js/2.e3f38e0f.chunk.js') }}"></script>
 {{--<script src="/static/js/main.b6c48731.chunk.js"></script>--}}
-<script src="{{ asset('/react/howto/static/js/main.b6c48731.chunk.js') }}"></script>
+<script src="{{ asset('react/howto/static/js/main.b6c48731.chunk.js') }}"></script>
 </body>
 </html>
