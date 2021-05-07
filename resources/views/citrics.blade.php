@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000"/>
     <meta name="description" content="Web site created using create-react-app"/>
     <link rel="apple-touch-icon" href="/logo192.png"/>
-    <link rel="manifest" href="/manifest.json"/>
+    <link rel="manifest" href="{{ asset('react/citrics/manifest.json') }}"/>
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&family=Quicksand:wght@500&display=swap"
         rel="stylesheet">
