@@ -224,7 +224,7 @@
             </div>
             <div class="rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="/citrics"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
                     See the Project
                 </a>
@@ -304,7 +304,7 @@
             </div>
             <div class="rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="/how_to"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
                     See the Project
                 </a>

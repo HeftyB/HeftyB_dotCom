@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,6 @@ Route::get("/blog/edit/{id}", [AuthController::class, "editPost"])->middleware("
 Route::delete("/blog/delete/{id}", [AuthController::class, "deletePost"])->middleware("auth");
 
 Route::post("/upload", [AuthController::class, "uploadImg"])->middleware("auth");
+
+Route::get("/how_to", [ProjectController::class, "howTo"]);
+Route::get("/citrics", [ProjectController::class, "citrics"]);
