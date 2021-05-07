@@ -41,5 +41,3 @@ Route::post("/upload", [AuthController::class, "uploadImg"])->middleware("auth")
 
 Route::get("/how_to/{path?}", [ProjectController::class, "howTo"]);
 Route::get("/citrics/{path?}", [ProjectController::class, "citrics"]);
-//Route::view("/how_to/{path?}", "howTo");
-//Route::view("/citrics/{path?}", "citrics");

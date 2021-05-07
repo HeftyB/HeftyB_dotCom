@@ -65,6 +65,8 @@
             <div class="rounded-md shadow my-2">
                 <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
                     See the Project
                 </a>
@@ -72,6 +74,8 @@
             <div class="inline-flex rounded-md shadow my-2">
                 <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
                     See the code
                 </a>
@@ -146,6 +150,8 @@
             <div class="rounded-md shadow my-2">
                 <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
                     See the Project
                 </a>
@@ -153,6 +159,8 @@
             <div class="inline-flex rounded-md shadow my-2">
                 <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
                     See the code
                 </a>
@@ -225,6 +233,8 @@
             <div class="rounded-md shadow my-2">
                 <a
                     href="/citrics"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
                     See the Project
                 </a>
@@ -232,6 +242,8 @@
             <div class="inline-flex rounded-md shadow my-2">
                 <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
                     See the code
                 </a>
@@ -305,6 +317,8 @@
             <div class="rounded-md shadow my-2">
                 <a
                     href="/how_to"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
                     See the Project
                 </a>
@@ -312,6 +326,8 @@
             <div class="inline-flex rounded-md shadow my-2">
                 <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
                     See the code
                 </a>
