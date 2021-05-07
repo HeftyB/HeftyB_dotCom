@@ -7,7 +7,7 @@
     @yield("head")
 </head>
 <body class="bg-gray-200 font-serif">
-<x-nav/>
+<!--<x-nav/>-->
 <div style="margin: 1rem 0;">
     @yield("content")
 </div>
