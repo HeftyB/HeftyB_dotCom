@@ -39,7 +39,7 @@ Route::delete("/blog/delete/{id}", [AuthController::class, "deletePost"])->middl
 Route::post("/upload", [AuthController::class, "uploadImg"])->middleware("auth");
 
 
-//Route::get("/how_to", [ProjectController::class, "howTo"]);
-//Route::get("/citrics", [ProjectController::class, "citrics"]);
-Route::view("/how_to/{path?}", "howTo");
-Route::view("/citrics/{path?}", "citrics");
+Route::get("/how_to/{path?}", [ProjectController::class, "howTo"]);
+Route::get("/citrics/{path?}", [ProjectController::class, "citrics"]);
+//Route::view("/how_to/{path?}", "howTo");
+//Route::view("/citrics/{path?}", "citrics");

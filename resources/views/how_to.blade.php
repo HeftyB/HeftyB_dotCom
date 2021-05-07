@@ -10,9 +10,9 @@
     <link rel="manifest" href="/manifest.json"/>
     <title>How-To</title>
 {{--    <link href="/static/css/2.43079d8c.chunk.css" rel="stylesheet">--}}
-    <link href="{{ asset('../../react/howto/static/css/2.43079d8c.chunk.css') }}" rel="stylesheet">
+    <link href="{{ asset('react/howto/static/css/2.43079d8c.chunk.css') }}" rel="stylesheet">
 {{--    <link href="/static/css/main.6bc989b3.chunk.css" rel="stylesheet">--}}
-    <link href="{{ asset('../../react/howto/static/css/main.6bc989b3.chunk.css') }}" rel="stylesheet">
+    <link href="{{ asset('react/howto/static/css/main.6bc989b3.chunk.css') }}" rel="stylesheet">
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -76,8 +76,8 @@
         r()
     }([])</script>
 {{--<script src="/static/js/2.e3f38e0f.chunk.js"></script>--}}
-<script src="{{ asset('../../react/howto/static/js/2.e3f38e0f.chunk.js') }}"></script>
+<script src="{{ asset('react/howto/static/js/2.e3f38e0f.chunk.js') }}"></script>
 {{--<script src="/static/js/main.b6c48731.chunk.js"></script>--}}
-<script src="{{ asset('../../react/howto/static/js/main.b6c48731.chunk.js') }}"></script>
+<script src="{{ asset('/react/howto/static/js/main.b6c48731.chunk.js') }}"></script>
 </body>
 </html>
