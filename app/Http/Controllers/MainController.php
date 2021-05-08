@@ -57,4 +57,9 @@ class MainController extends Controller
     {
         return Storage::get("heftyb/imgs/" . $filename);
     }
+
+    public function sendMail(Request $request)
+    {
+        return null;
+    }
 }

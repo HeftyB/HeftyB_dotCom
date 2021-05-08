@@ -35,15 +35,15 @@
                                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
                             <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                                HeftyBDev@gmail.com
+                                heftyb@heftyb.com
                             </div>
                         </div>
                     </div>
 
-                    <form class="p-6 flex flex-col justify-center">
+                    <form class="p-6 flex flex-col justify-center" action="/send_message">
                         <div class="flex flex-col">
                             <label for="name" class="hidden">Full Name</label>
-                            <input type="name" name="name" id="name" placeholder="Full Name"
+                            <input type="text" name="name" id="name" placeholder="Full Name"
                                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
                         </div>
 
@@ -60,7 +60,7 @@
                         </div>
                         <div class="flex flex-col mt-2">
                             <label for="mes" class="hidden">Message</label>
-                            <input type="text" name="mes" id="mes" placeholder="Type a message!"
+                            <textarea name="mes" id="mes" placeholder="Type a message!"
                                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
                         </div>
 

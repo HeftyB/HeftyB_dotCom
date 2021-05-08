@@ -12,8 +12,8 @@
                 <strong>HeftyB.com</strong>
             </span>
                 <hr/>
-                <span>
-                <small>This application!</small>
+                <span class="text-xl">
+                <small>A Laravel application + LAMP stack hosted on a Raspberry Pi </small>
             </span>
             </div>
 

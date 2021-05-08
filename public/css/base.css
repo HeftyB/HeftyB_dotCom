@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    max-width: 1536px;
 }
 
 #baseNavLinks {
@@ -107,4 +108,8 @@
 
 .items-center {
     align-items: center;
+}
+
+a {
+    color: inherit;
 }
