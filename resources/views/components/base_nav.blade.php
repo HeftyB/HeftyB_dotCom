@@ -1,4 +1,4 @@
-<nav id="baseNav">
+<nav class="baseNav">
     <div id="baseNavCon">
         <div id="baseNavLinks">
             <div class="baseNavButton">
