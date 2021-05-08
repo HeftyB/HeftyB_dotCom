@@ -8,6 +8,11 @@
 </head>
 <body class="bg-gray-200 font-serif">
 <x-base_nav/>
+<div class="baseNav">
+    <p class="text-white text-center" style="font-size: x-large;">
+        Project Demo:
+    </p>
+</div>
 <div style="margin: 1rem 0;">
     @yield("content")
 </div>

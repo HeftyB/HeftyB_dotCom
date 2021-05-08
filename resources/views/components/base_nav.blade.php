@@ -11,7 +11,7 @@
                     href="/blog">Blog</a></div>
         </div>
 
-        <div id="baseNavMenCon">
+        <div class="baseNavMenCon">
             @if (\Illuminate\Support\Facades\Auth::check())
                 <a href="/dashborad">
                     <div id="baseNavUserCon" class="ml-3 relative">
