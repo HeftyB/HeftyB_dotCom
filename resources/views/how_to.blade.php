@@ -1,12 +1,12 @@
 @extends("layouts.base")
 
-
 @section("head")
+    <link rel="icon" href="{{ asset('react/howto/favicon.ico') }}"/>
+    <title>HeftyB's How-To</title>
     <link rel="manifest" href="{{ asset('react/howto/manifest.json') }}"/>
-    <link href="{{ asset('react/howto/static/css/2.43079d8c.chunk.css') }}" rel="stylesheet">
+    <link href="{{ asset('react/howto/static/css/2.43079d8c.chunk.cs') }}" rel="stylesheet">
     <link href="{{ asset('react/howto/static/css/main.6bc989b3.chunk.css') }}" rel="stylesheet">
 @endsection
-
 
 @section("content")
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -65,7 +65,7 @@
                 return l.d(t, "a", t), t
             }, l.o = function (e, t) {
                 return Object.prototype.hasOwnProperty.call(e, t)
-            }, l.p = "/";
+            }, l.p = "/how_to/";
             var f = this["webpackJsonphow-to"] = this["webpackJsonphow-to"] || [], i = f.push.bind(f);
             f.push = t, f = f.slice();
             for (var a = 0; a < f.length; a++) t(f[a]);
@@ -73,5 +73,5 @@
             r()
         }([])</script>
     <script src="{{ asset('react/howto/static/js/2.e3f38e0f.chunk.js') }}"></script>
-    <script src="{{ asset('react/howto/static/js/main.b6c48731.chunk.js') }}"></script>
+    <script src="{{ asset('react/howto/static/js/main.3e82efe1.chunk.js') }}"></script>
 @endsection

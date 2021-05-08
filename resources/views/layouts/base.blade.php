@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeftyB</title>
     @yield("head")
 </head>
 <body class="bg-gray-200 font-serif">
