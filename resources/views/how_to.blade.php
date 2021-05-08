@@ -4,7 +4,7 @@
     <link rel="icon" href="{{ asset('react/howto/favicon.ico') }}"/>
     <title>HeftyB's How-To</title>
     <link rel="manifest" href="{{ asset('react/howto/manifest.json') }}"/>
-    <link href="{{ asset('react/howto/static/css/2.43079d8c.chunk.cs') }}" rel="stylesheet">
+    <link href="{{ asset('react/howto/static/css/2.43079d8c.chunk.css') }}" rel="stylesheet">
     <link href="{{ asset('react/howto/static/css/main.6bc989b3.chunk.css') }}" rel="stylesheet">
 @endsection
 
