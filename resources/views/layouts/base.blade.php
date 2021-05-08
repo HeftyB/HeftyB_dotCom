@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield("head")
+    <link href="{{ asset('css/base.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-200 font-serif">
-<x-nav/>
+<x-base_nav/>
 <div style="margin: 1rem 0;">
     @yield("content")
 </div>

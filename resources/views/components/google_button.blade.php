@@ -1,4 +1,5 @@
 <div style="height:36px;width:100px;"
+     id="googleButton"
      class="mx-auto px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"
      onclick="window.location='/auth/redirect'">
     <div class="flex justify-between">
@@ -24,5 +25,4 @@
         </div>
         <div class="text-center">Sign-In</div>
     </div>
-
 </div>
