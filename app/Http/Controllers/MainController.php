@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMe;
 use App\Models\BlogPost;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class MainController extends Controller
@@ -60,6 +62,12 @@ class MainController extends Controller
 
     public function sendMail(Request $request)
     {
-        return null;
+        $name = $request->input("name");
+        $email = $request->input("email");
+        $phone = $request->input("tel");
+        $message = $request->input("mes");
+
+
+        Mail::to("heftyb@heftyb.com")->send(new ContactMe($name, $email, $phone, $message));
     }
 }
