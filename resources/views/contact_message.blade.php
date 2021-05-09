@@ -7,8 +7,8 @@
 {{--    <meta http-equiv="X-UA-Compatible" content="ie=edge">--}}
 {{--    <title>Contact Message</title>--}}
 {{--</head>--}}
-<body>
-    {{ dd($name, $phone, $email, $mes, $message) }}
+{{--<body>--}}
+{{--    {{ dd($name, $phone, $email, $mes, $message) }}--}}
     <div class="">
         <p class="text-4xl text-center">New Message!</p>
         <div class="">
@@ -23,5 +23,5 @@
         </div>
 
     </div>
-</body>
+{{--</body>--}}
 {{--</html>--}}
