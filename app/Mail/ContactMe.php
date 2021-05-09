@@ -44,9 +44,9 @@ class ContactMe extends Mailable
     {
         return $this->view('contact_message')
             ->with([
-                'name' => $this->name,
-                'email' => $this->email,
-                'phone' => $this->phone,
+//                'name' => $this->name,
+//                'email' => $this->email,
+//                'phone' => $this->phone,
                 'mes' => $this->mes
             ])
             ->subject('New Message from HeftyB.com!')
