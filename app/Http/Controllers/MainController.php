@@ -67,6 +67,7 @@ class MainController extends Controller
         $phone = $request->input("tel");
         $message = $request->input("mes");
 
+        dd($name, $phone, $email, $message);
 
         Mail::to("heftyb@heftyb.com")->send(new ContactMe($name, $email, $phone, $message));
 
