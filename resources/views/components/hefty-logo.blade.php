@@ -1,4 +1,4 @@
-<div class="mx-auto m-2 pb-6 flex">
+<div class="mx-auto m-2 pb-6 flex justify-center">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 300.000000 307.000000" preserveAspectRatio="xMidYMid meet" class="mx-auto w-52 animate-pulse">
         <g transform="translate(0.000000,307.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -32,6 +32,6 @@
             <path d="M1836 334 c-18 -18 -6 -54 19 -54 45 0 62 40 26 60 -25 13 -27 13 -45 -6z"></path>
         </g>
     </svg>
-    <span class="text-3xl">Is under construction!</span>
+    <p class="text-3xl mx-12 my-auto">Is under construction!</p>
     <img class="w-52 rounded-2xl" src="blog/heftyb/imgs/9gveZUAuCBBzk4L0peqeFBxnqQd7aB2kYWlMQWYE.jpg" alt="contruction img">
 </div>
