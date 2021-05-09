@@ -13,13 +13,13 @@
     <div class="">
         <p class="text-4xl text-center">New Message!</p>
         <div class="">
-            <p class="">From: {{ $name }}</p>
-            <p class="">Contact: {{ $phone }}, {{ $email }}</p>
+{{--            <p class="">From: {{ $name }}</p>--}}
+{{--            <p class="">Contact: {{ $phone }}, {{ $email }}</p>--}}
         </div>
 
         <div class="">
             <p class="">
-{{--                {{ $message }}--}}
+                {{ $mes }}
             </p>
         </div>
 
