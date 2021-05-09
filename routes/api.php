@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MainController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,5 @@ Route::middleware('auth:api')->post("/upload_url", [AuthController::class, "uplo
 Route::middleware('auth:api')->delete("/delete", [AuthController::class, "deleteFile"]);
 
 Route::middleware('auth:api')->put("/blog/update/{id}", [AuthController::class, "saveBlogPost"]);
+
+Route::get("/send_message", [MainController::class, "sendMail"]);

@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                    <form class="p-6 flex flex-col justify-center" action="/send_message">
+                    <form class="p-6 flex flex-col justify-center" action="/api/send_message">
                         <div class="flex flex-col">
                             <label for="name" class="hidden">Full Name</label>
                             <input type="text" name="name" id="name" placeholder="Full Name"
