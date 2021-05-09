@@ -6,7 +6,7 @@
             HeftyB <br class="hidden lg:inline-block"/>
             Web Developer
         </h1>
-        <p class="mb-8 leading-relaxed">
+        <p class="mb-8 m-14 leading-relaxed">
             Welcome, I am Andrew Shields a Software Engineer / Web Developer always on the quest to learn new things.
             I have been building & fixing various electronics and computers for 15+ years and I still love working on
             projects and solutions.
