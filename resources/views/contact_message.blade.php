@@ -9,6 +9,7 @@
 {{--</head>--}}
 {{--<body>--}}
 {{--    {{ dd($name, $phone, $email, $mes, $message) }}--}}
+{{ dd(get_defined_vars()) }}
     <div class="">
         <p class="text-4xl text-center">New Message!</p>
         <div class="">
