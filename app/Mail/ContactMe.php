@@ -37,6 +37,8 @@ class ContactMe extends Mailable
      */
     public function build()
     {
-        return $this->view('contact_message');
+        return $this->view('contact_message')
+            ->subject('New Message from HeftyB.com!')
+            ->replyTo('noreply@heftyb.com');
     }
 }
