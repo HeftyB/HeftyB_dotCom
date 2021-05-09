@@ -12,6 +12,11 @@ class ContactMe extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $name;
+    public $email;
+    public $phone;
+    public $message;
+
     /**
      * Create a new message instance.
      *

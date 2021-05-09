@@ -69,5 +69,7 @@ class MainController extends Controller
 
 
         Mail::to("heftyb@heftyb.com")->send(new ContactMe($name, $email, $phone, $message));
+
+        return redirect()->route("dashboard");
     }
 }
