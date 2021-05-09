@@ -12,21 +12,26 @@ class ContactMe extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $name;
-    public $email;
-    public $phone;
+//    public $name;
+//    public $email;
+//    public $phone;
     public $mes;
 
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param string $name
+     * @param string $email
+     * @param string $phone
+     * @param string $mes
      */
-    public function __construct(string $name, string $email, string $phone, string $mes)
+    public function __construct(
+//        string $name, string $email, string $phone,
+        string $mes)
     {
-        $this->$name = $name;
-        $this->$email = $email;
-        $this->$phone = $phone;
+//        $this->$name = $name;
+//        $this->$email = $email;
+//        $this->$phone = $phone;
         $this->$mes = $mes;
     }
 
