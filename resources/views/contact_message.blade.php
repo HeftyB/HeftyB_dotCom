@@ -18,7 +18,7 @@
 
         <div class="">
             <p class="">
-                {{ $message }}
+{{--                {{ $message }}--}}
             </p>
         </div>
 
