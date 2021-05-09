@@ -1,4 +1,4 @@
-<div class="mx-auto m-2 pb-6">
+<div class="mx-auto m-2 pb-6 flex">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 300.000000 307.000000" preserveAspectRatio="xMidYMid meet" class="mx-auto w-52 animate-pulse">
         <g transform="translate(0.000000,307.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -33,5 +33,5 @@
         </g>
     </svg>
     <span class="text-3xl">Is under construction!</span>
-    <img src="blog/heftyb/imgs/9gveZUAuCBBzk4L0peqeFBxnqQd7aB2kYWlMQWYE.jpg" alt="contruction img">
+    <img class="w-52 rounded-2xl" src="blog/heftyb/imgs/9gveZUAuCBBzk4L0peqeFBxnqQd7aB2kYWlMQWYE.jpg" alt="contruction img">
 </div>
