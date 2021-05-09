@@ -65,9 +65,9 @@ class MainController extends Controller
         $name = $request->input("name");
         $email = $request->input("email");
         $phone = $request->input("tel");
-        $message = $request->input("mes");
+        $mes = $request->input("mes");
 
-        Mail::to("heftyb@heftyb.com")->send(new ContactMe($name, $email, $phone, $message));
+        Mail::to("heftyb@heftyb.com")->send(new ContactMe($name, $email, $phone, $mes));
 
         return redirect()->route("dashboard");
     }

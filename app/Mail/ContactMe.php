@@ -22,12 +22,12 @@ class ContactMe extends Mailable
      *
      * @return void
      */
-    public function __construct($name, $email, $phone, $message)
+    public function __construct($name, $email, $phone, $mes)
     {
         $this->$name = $name;
         $this->$email = $email;
         $this->$phone = $phone;
-        $this->$message = $message;
+        $this->$mes = $mes;
     }
 
     /**
