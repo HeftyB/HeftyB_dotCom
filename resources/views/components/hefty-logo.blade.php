@@ -32,4 +32,6 @@
             <path d="M1836 334 c-18 -18 -6 -54 19 -54 45 0 62 40 26 60 -25 13 -27 13 -45 -6z"></path>
         </g>
     </svg>
+    <span class="text-3xl">Is under construction!</span>
+    <img src="blog/heftyb/imgs/9gveZUAuCBBzk4L0peqeFBxnqQd7aB2kYWlMQWYE.jpg" alt="contruction img">
 </div>
