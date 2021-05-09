@@ -15,7 +15,7 @@ class ContactMe extends Mailable
     public $name;
     public $email;
     public $phone;
-    public $message;
+    public $mes;
 
     /**
      * Create a new message instance.
@@ -38,6 +38,12 @@ class ContactMe extends Mailable
     public function build()
     {
         return $this->view('contact_message')
+            ->with([
+                'name' => $this->name,
+                'email' => $this->email,
+                'phone' => $this->phone,
+                'mes' => $this->mes
+            ])
             ->subject('New Message from HeftyB.com!')
             ->replyTo('noreply@heftyb.com');
     }
