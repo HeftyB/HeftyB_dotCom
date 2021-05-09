@@ -61,7 +61,7 @@
                         <div class="flex flex-col mt-2">
                             <label for="mes" class="hidden">Message</label>
                             <textarea name="mes" id="mes" placeholder="Type a message!"
-                                   class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                                   class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"/>
                         </div>
 
                         <button type="submit"
