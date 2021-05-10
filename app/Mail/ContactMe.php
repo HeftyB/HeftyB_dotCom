@@ -12,9 +12,9 @@ class ContactMe extends Mailable
 {
     use Queueable, SerializesModels;
 
-//    public $name;
-//    public $email;
-//    public $phone;
+    public $from;
+    public $emadd;
+    public $phone;
     public $mes;
 
     /**
@@ -25,13 +25,11 @@ class ContactMe extends Mailable
      * @param string $phone
      * @param string $mes
      */
-    public function __construct(
-//        string $name, string $email, string $phone,
-        string $mes)
+    public function __construct($from, $emadd, $phone, $mes)
     {
-//        $this->$name = $name;
-//        $this->$email = $email;
-//        $this->$phone = $phone;
+        $this->$from = $from;
+        $this->$emadd = $emadd;
+        $this->$phone = $phone;
         $this->$mes = $mes;
     }
 
@@ -43,12 +41,12 @@ class ContactMe extends Mailable
     public function build()
     {
         return $this->view('contact_message')
-            ->with([
-//                'name' => $this->name,
-//                'email' => $this->email,
+//            ->with([
+//                'from' => $this->from,
+//                'emadd' => $this->emadd,
 //                'phone' => $this->phone,
-                'mes' => $this->mes
-            ])
+//                'mes' => $this->mes
+//            ])
             ->subject('New Message from HeftyB.com!')
             ->replyTo('noreply@heftyb.com');
     }
