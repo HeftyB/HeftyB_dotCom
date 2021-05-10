@@ -64,7 +64,7 @@
             </div>
             <div class="rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
@@ -73,7 +73,7 @@
             </div>
             <div class="inline-flex rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="https://github.com/HeftyB/HeftyB_dotCom"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
@@ -89,7 +89,7 @@
         {{--        <img src={nasa} alt="image"/>--}}
         {{--    </div>--}}
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
+            <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/ssRecipe.png?raw=true" alt="super-supper image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
@@ -158,7 +158,7 @@
             </div>
             <div class="inline-flex rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="https://github.com/super-supper"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
@@ -171,7 +171,7 @@
     <div
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
+            <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/citrics.png?raw=true" alt="citrics image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
@@ -241,7 +241,7 @@
             </div>
             <div class="inline-flex rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="https://github.com/HeftyB/citrics-be"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
@@ -254,7 +254,7 @@
     <div
         class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
+            <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/howto.png?raw=true" alt="HeftyB.com image"
                  class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
@@ -325,7 +325,7 @@
             </div>
             <div class="inline-flex rounded-md shadow my-2">
                 <a
-                    href="#"
+                    href="https://github.com/HeftyB/How-To"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
