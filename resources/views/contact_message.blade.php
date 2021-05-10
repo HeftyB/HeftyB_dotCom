@@ -1,15 +1,17 @@
-{{ dd(get_defined_vars()) }}
-<div class="">
-    <p class="text-4xl text-center">New Message!</p>
+<div>
+    <p
+        style="
+            text-align: center;
+            font-weight: bold;"
+    >New Message!</p>
     <div class="">
-        <p class="">From: {{ $fnames }}</p>
-        <p class="">Contact: {{ $phone }}, {{ $emadd }}</p>
+        <p><b>From: </b>{{ $fnames }}</p>
+        <p><b>Contact: </b>{{ $phone }}, {{ $emadd }}</p>
     </div>
 
-    <div class="">
-        <p class="">
+    <div>
+        <p>
             {{ $mes }}
         </p>
     </div>
-
 </div>
