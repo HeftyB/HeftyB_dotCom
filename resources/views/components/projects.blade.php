@@ -4,7 +4,7 @@
         id="projects">
         <div class="flex flex-col justify-center">
             <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
-                 class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
+                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
             <div class="text-4xl text-center align-text-bottom p-6">
@@ -90,7 +90,7 @@
         {{--    </div>--}}
         <div class="flex flex-col justify-center">
             <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/ssRecipe.png?raw=true" alt="super-supper image"
-                 class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
+                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
             <div class="text-4xl text-center align-text-bottom p-6">
@@ -172,7 +172,7 @@
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
         <div class="flex flex-col justify-center">
             <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/citrics.png?raw=true" alt="citrics image"
-                 class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
+                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
             <div class="text-4xl text-center align-text-bottom p-6">
@@ -255,7 +255,7 @@
         class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
         <div class="flex flex-col justify-center">
             <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/howto.png?raw=true" alt="HeftyB.com image"
-                 class="w-64 rounded-3xl overflow-hiddens border-4 border-black"/>
+                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
             <div class="text-4xl text-center align-text-bottom p-6">
@@ -337,13 +337,11 @@
 </div>
 
 {{--TODO write blog post for each project--}}
-{{--TODO complete project cards--}}
 
 {{--TODO add link for user to be added to the approved google dev list--}}
 
 {{--TODO set up cloudflare dynamic ip update--}}
 
-{{--TODO set up contact page to send email or message upon submit--}}
 {{--TODO make site responsive--}}
 {{--TODO make delete confirmation on imgs / blog--}}
 {{--TODO make dash-blog-img link to blog--}}
