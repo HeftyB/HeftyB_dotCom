@@ -12,7 +12,7 @@ class ContactMe extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $from;
+    public $fnames;
     public $emadd;
     public $phone;
     public $mes;
@@ -25,9 +25,9 @@ class ContactMe extends Mailable
      * @param $phone
      * @param $mes
      */
-    public function __construct($from, $emadd, $phone, $mes)
+    public function __construct($fnames, $emadd, $phone, $mes)
     {
-        $this->from = $from;
+        $this->fnames = $fnames;
         $this->emadd = $emadd;
         $this->phone = $phone;
         $this->mes = $mes;
