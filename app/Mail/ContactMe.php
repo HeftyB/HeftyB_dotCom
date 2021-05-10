@@ -20,17 +20,17 @@ class ContactMe extends Mailable
     /**
      * Create a new message instance.
      *
-     * @param string $name
-     * @param string $email
-     * @param string $phone
-     * @param string $mes
+     * @param $from
+     * @param $emadd
+     * @param $phone
+     * @param $mes
      */
     public function __construct($from, $emadd, $phone, $mes)
     {
-        $this->$from = $from;
-        $this->$emadd = $emadd;
-        $this->$phone = $phone;
-        $this->$mes = $mes;
+        $this->from = $from;
+        $this->emadd = $emadd;
+        $this->phone = $phone;
+        $this->mes = $mes;
     }
 
     /**
