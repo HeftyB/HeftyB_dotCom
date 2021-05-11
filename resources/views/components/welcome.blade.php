@@ -22,7 +22,7 @@
             think this application really highlights my ability to stay flexible with new technologies and adapt to
             achieve the desired goal!
         </p>
-        <div class="flex justify-center">
+        <div class="flex justify-center w-full">
             <button id="wProjectsButton"
                     class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                 Projects
