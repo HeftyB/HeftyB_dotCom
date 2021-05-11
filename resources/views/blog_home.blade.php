@@ -16,5 +16,7 @@
             <x-blog_tile :blogPost="$blogPost" :num="$loop->iteration"/>
         @endforeach
     </div>
+    <hr class="m-4">
     {{ $blogPosts->links() }}
+    <hr class="m-4">
 @endsection

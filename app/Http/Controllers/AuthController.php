@@ -43,7 +43,7 @@ class AuthController extends Controller
     {
         $token = Auth::user()->api_token;
         $user = User::find(Auth::user()->getAuthIdentifier());
-        $blogPosts = BlogPost::where("user_id", $user->id)->paginate(8);
+        $blogPosts = BlogPost::where("user_id", $user->id)->orderBy("id", "desc")->paginate(8);
         $files = UserFile::where("user_id", $user->id)->paginate(10);
 
         return view("dashboard", ["token" => $token, "blogPosts" => $blogPosts, "files" => $files]);

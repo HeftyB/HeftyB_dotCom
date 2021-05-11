@@ -267,5 +267,9 @@ $(document).ready(function () {
     $("#githubButton").click(function () {
         window.location.href = "https://www.github.com/heftyb";
     })
+
+    $("#contactButton").click(function () {
+        window.location.assign("/contact");
+    })
 })
 

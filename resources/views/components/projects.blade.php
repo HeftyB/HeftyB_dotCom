@@ -3,18 +3,20 @@
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl"
         id="projects">
         <div class="flex flex-col justify-center">
-            <img src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png" alt="HeftyB.com image"
-                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
+            <img
+                src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png"
+                alt="HeftyB.com image"
+                class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
         </div>
         <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
             <div class="text-4xl text-center align-text-bottom p-6">
-            <span class="font-bold">
-                <strong>HeftyB.com</strong>
-            </span>
+                <span class="font-bold">
+                    <strong>HeftyB.com</strong>
+                </span>
                 <hr/>
                 <span class="text-xl">
-                <small>A Laravel application + LAMP stack hosted on a Raspberry Pi </small>
-            </span>
+                    <small>A Laravel application + LAMP stack hosted on a Raspberry Pi </small>
+                </span>
             </div>
 
             <div class="text-left align-middle mb-4 py-2">
