@@ -21,9 +21,13 @@ Switch to the repo folder
 
     cd HeftyB_dotCom
 
-Install all the dependencies using composer
+Install all the PHP dependencies using composer
 
     composer install
+    
+Install all the Node dependencies using npm
+
+    npm i
 
 Copy the example env file and make the required configuration changes in the .env file
 
