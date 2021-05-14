@@ -343,7 +343,8 @@
 {{--TODO add link for user to be added to the approved google dev list--}}
 
 {{--TODO set up cloudflare dynamic ip update--}}
-
+{{--TODO make projects button in nav a drop down w/ links to deployed demos--}}
+{{--TODO form validation on contact--}}
 {{--TODO make site responsive--}}
 {{--TODO make delete confirmation on imgs / blog--}}
 {{--TODO make dash-blog-img link to blog--}}
