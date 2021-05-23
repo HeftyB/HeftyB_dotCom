@@ -1,351 +1,381 @@
 <div class="mb-8">
     <div
-        class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl"
-        id="projects">
+        class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl relative h-52"
+        id="p1">
+
+        <div
+            class="absolute left-0 bottom-0 w-full h-full z-10 rounded-2xl"
+            style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.9));">
+        </div>
+
         <div class="flex flex-col justify-center">
             <img
-                src="/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png"
+                src="https://www.heftyb.com/blog/heftyb/imgs/0OSCm91NqVd1fGRgW4IyW5gimNOPUkLogkpcGC6n.png"
                 alt="HeftyB.com image"
-                class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
+                class="absolute left-0 top-0 w-full h-full rounded-2xl z-0 object-cover"/>
         </div>
-        <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
-            <div class="text-4xl text-center align-text-bottom p-6">
-                <span class="font-bold">
-                    <strong>HeftyB.com</strong>
-                </span>
-                <hr/>
-                <span class="text-xl">
-                    <small>A Laravel application + LAMP stack hosted on a Raspberry Pi </small>
-                </span>
-            </div>
 
-            <div class="text-left align-middle mb-4 py-2">
-                <p>
-                <span class="text-xl">
-                    Featured Technologies :
-                </span>
-                    <img
-                        class="w-12 inline-block mx-2"
-                        src="https://cdn.svgporn.com/logos/linux-tux.svg"
-                        alt="Tux"/>
-
-                    <img
-                        class="w-12 inline-block mx-2"
-                        src="https://cdn.svgporn.com/logos/apache.svg"
-                        alt="Apache"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/mysql.svg"
-                        alt="MySQL"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/php.svg"
-                        alt="PHP"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/laravel.svg"
-                        alt="Laravel"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/raspberry-pi.svg"
-                        alt="Raspberry Pi"/>
-                </p>
-            </div>
+        <div
+            class="flex flex-col justify-end p-8 text-4xl text-center align-text-bottom text-white absolute left-0 bottom-0 w-full h-full z-30">
+            <p class="font-bold">
+                <strong>HeftyB.com</strong>
+            </p>
+            <hr/>
+            <p class="text-xl">
+                <small>A Laravel application + LAMP stack hosted on a Raspberry Pi</small>
+            </p>
         </div>
-        <div class="flex flex-col justify-center w-auto border-l pl-4">
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="#"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
-                    See the Blog Post
-                </a>
-            </div>
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                    See the Project
-                </a>
-            </div>
-            <div class="inline-flex rounded-md shadow my-2">
-                <a
-                    href="https://github.com/HeftyB/HeftyB_dotCom"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
-                    See the code
-                </a>
+
+        <div id="projM-p1"
+             class="tilePara absolute left-0 bottom-0 w-full h-full z-30 opacity-0 px-4 py-2 bg-yellow-50 rounded-2xl">
+            <div class="h-full flex flex-col justify-center modal-container">
+                <div class="w-9/12 mx-auto flex flex-col justify-between">
+                    <div class="text-left align-middle py-2 w-10/12 mx-auto">
+                        <div class="grid grid-cols-3 sm:flex sm:justify-between justify-items-center">
+                            <p class="text-2xl text-center hidden md:block">Featured Technologies :</p>
+                            <img
+                                class="w-8 inline-block mx-2"
+                                src="https://cdn.svgporn.com/logos/linux-tux.svg"
+                                alt="Tux"/>
+                            <img
+                                class="w-6 inline-block mx-2"
+                                src="https://cdn.svgporn.com/logos/apache.svg"
+                                alt="Apache"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/mysql.svg"
+                                alt="MySQL"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/php.svg"
+                                alt="PHP"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/laravel.svg"
+                                alt="Laravel"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/raspberry-pi.svg"
+                                alt="Raspberry Pi"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center w-auto">
+                    <div class="rounded-md shadow my-2">
+                        <a href="#"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
+                            <p><span class="hidden sm:inline">See the </span>Blog Post</p>
+                        </a>
+                    </div>
+                    <div class="rounded-md shadow my-2 mx-2 sm:mx-8">
+                        <a href="/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                        </a>
+                    </div>
+                    <div class="inline-flex rounded-md shadow my-2">
+                        <a href="https://github.com/HeftyB/HeftyB_dotCom"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
+                            <p><span class="hidden sm:inline">See the </span>Code</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 
     <div
-        class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
-        {{--    <div class="w-64 rounded-full overflow-hidden border-4 border-black">--}}
-        {{--        <img src={nasa} alt="image"/>--}}
-        {{--    </div>--}}
-        <div class="flex flex-col justify-center">
-            <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/ssRecipe.png?raw=true" alt="super-supper image"
-                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
+        class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl relative h-52"
+        id="p2">
+
+        <div
+            class="absolute left-0 bottom-0 w-full h-full z-10 rounded-2xl"
+            style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.9));">
         </div>
-        <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
-            <div class="text-4xl text-center align-text-bottom p-6">
-            <span class="font-bold">
+
+        <div class="flex flex-col justify-center">
+            <img
+                src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/ssRecipe.png?raw=true"
+                alt="Super-Supper image"
+                class="absolute left-0 top-0 w-full h-full rounded-2xl z-0 object-cover"/>
+        </div>
+
+        <div
+            class="flex flex-col justify-end p-8 text-4xl text-center align-text-bottom text-white absolute left-0 bottom-0 w-full h-full z-30">
+            <p class="font-bold">
                 <strong>Super-Supper</strong>
-            </span>
-                <hr/>
-                <span class="text-2xl">An application of miroservices to help manage meal time</span>
-            </div>
+            </p>
+            <hr/>
+            <p class="text-xl">
+                <small>An application of miroservices to help manage meal time</small>
+            </p>
+        </div>
 
-            <div class="text-left align-middle mb-4 py-2">
-                <p>
-                <span class="text-xl">
-                    Featured Technologies :
-                </span>
+        <div id="projM-p2"
+             class="tilePara absolute left-0 bottom-0 w-full h-full z-30 opacity-0 px-4 py-2 bg-yellow-50 rounded-2xl">
+            <div class="h-full flex flex-col justify-center modal-container">
+                <div class="w-9/12 mx-auto flex flex-col justify-between">
+                    <div class="text-left align-middle py-2 w-10/12 mx-auto">
+                        <div class="grid grid-cols-3 sm:flex sm:justify-between justify-items-center">
+                            <p class="text-2xl text-center hidden md:block">Featured Technologies :</p>
+                            <img
+                                class="w-8 inline-block mx-2"
+                                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                                alt="React"/>
+                            <img
+                                class="w-6 inline-block mx-2"
+                                src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"
+                                alt="Java"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/spring.svg"
+                                alt="Spring Boot"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/nodejs.svg"
+                                alt="Node"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/docker-icon.svg"
+                                alt="Docker"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/mysql.svg"
+                                alt="MySQL"/>
+                        </div>
+                    </div>
+                </div>
 
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
-                        alt="React"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"
-                        alt="Java"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/spring.svg"
-                        alt="Spring Boot"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/nodejs.svg"
-                        alt="Node"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/docker-icon.svg"
-                        alt="Docker"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/mysql.svg"
-                        alt="MySQL"/>
-                </p>
+                <div class="flex justify-center w-auto">
+                    <div class="rounded-md shadow my-2">
+                        <a href="#"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
+                            <p><span class="hidden sm:inline">See the </span>Blog Post</p>
+                        </a>
+                    </div>
+                    <div class="rounded-md shadow my-2 mx-2 sm:mx-8">
+                        <a href="#"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                        </a>
+                    </div>
+                    <div class="inline-flex rounded-md shadow my-2">
+                        <a href="https://github.com/super-supper"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
+                            <p><span class="hidden sm:inline">See the </span>Code</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="flex flex-col justify-center w-auto border-l pl-4">
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="#"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
-                    See the Blog Post
-                </a>
-            </div>
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                    See the Project
-                </a>
-            </div>
-            <div class="inline-flex rounded-md shadow my-2">
-                <a
-                    href="https://github.com/super-supper"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
-                    See the code
-                </a>
-            </div>
-        </div>
+
     </div>
 
     <div
-        class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
-        <div class="flex flex-col justify-center">
-            <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/citrics.png?raw=true" alt="citrics image"
-                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
+        class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl relative h-52"
+        id="p3">
+
+        <div
+            class="absolute left-0 bottom-0 w-full h-full z-10 rounded-2xl"
+            style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.9));">
         </div>
-        <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
-            <div class="text-4xl text-center align-text-bottom p-6">
-            <span class="font-bold">
+
+        <div class="flex flex-col justify-center">
+            <img
+                src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/citrics.png?raw=true"
+                alt="HeftyB.com image"
+                class="absolute left-0 top-0 w-full h-full rounded-2xl z-0 object-cover"/>
+        </div>
+
+        <div
+            class="flex flex-col justify-end p-8 text-4xl text-center align-text-bottom text-white absolute left-0 bottom-0 w-full h-full z-30">
+            <p class="font-bold">
                 <strong>Citrics</strong>
-            </span>
-                <hr/>
-                <span>
+            </p>
+            <hr/>
+            <p class="text-xl">
                 <small>A city comparison application</small>
-            </span>
-            </div>
+            </p>
+        </div>
 
-            <div class="text-left align-middle mb-4 py-2">
-                <p>
-                <span class="text-xl">
-                    Featured Technologies :
-                </span>
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
-                        alt="React"/>
+        <div id="projM-p3"
+             class="tilePara absolute left-0 bottom-0 w-full h-full z-30 opacity-0 px-4 py-2 bg-yellow-50 rounded-2xl">
+            <div class="h-full flex flex-col justify-center modal-container">
+                <div class="w-9/12 mx-auto flex flex-col justify-between">
+                    <div class="text-left align-middle py-2 w-10/12 mx-auto">
+                        <div class="grid grid-cols-3 sm:flex sm:justify-between justify-items-center">
+                            <p class="text-2xl text-center hidden md:block">Featured Technologies :</p>
+                            <img
+                                class="w-8 inline-block mx-2"
+                                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                                alt="React"/>
+                            <img
+                                class="w-6 inline-block mx-2"
+                                src="https://cdn.svgporn.com/logos/redux.svg"
+                                alt="Redux"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/spring.svg"
+                                alt="Spring Boot"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/postgresql.svg"
+                                alt="PostGreSQL"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/aws.svg"
+                                alt="AWS"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/heroku-icon.svg"
+                                alt="Heroku"/>
+                        </div>
+                    </div>
+                </div>
 
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/redux.svg"
-                        alt="Redux"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/spring.svg"
-                        alt="Spring Boot"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/postgresql.svg"
-                        alt="PostGreSQL"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/aws.svg"
-                        alt="AWS"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/heroku-icon.svg"
-                        alt="Heroku"/>
-                </p>
+                <div class="flex justify-center w-auto">
+                    <div class="rounded-md shadow my-2">
+                        <a href="#"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
+                            <p><span class="hidden sm:inline">See the </span>Blog Post</p>
+                        </a>
+                    </div>
+                    <div class="rounded-md shadow my-2 mx-2 sm:mx-8">
+                        <a href="/citrics"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                        </a>
+                    </div>
+                    <div class="inline-flex rounded-md shadow my-2">
+                        <a href="https://github.com/HeftyB/citrics-be"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
+                            <p><span class="hidden sm:inline">See the </span>Code</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="flex flex-col justify-center w-auto border-l pl-4">
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="#"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
-                    See the Blog Post
-                </a>
-            </div>
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="/citrics"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                    See the Project
-                </a>
-            </div>
-            <div class="inline-flex rounded-md shadow my-2">
-                <a
-                    href="https://github.com/HeftyB/citrics-be"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
-                    See the code
-                </a>
-            </div>
-        </div>
+
     </div>
 
     <div
-        class="container mx-auto bg-gray-300 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-2xl">
+        class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl relative h-52"
+        id="p4">
+
+        <div
+            class="absolute left-0 bottom-0 w-full h-full z-10 rounded-2xl"
+            style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.9));">
+        </div>
+
         <div class="flex flex-col justify-center">
-            <img src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/howto.png?raw=true" alt="HeftyB.com image"
-                 class="w-64 h-36 rounded-3xl overflow-hiddens border-4 border-black"/>
+            <img
+                src="https://github.com/HeftyB/HeftyB_dotCom/blob/main/storage/projectimgs/howto.png?raw=true"
+                alt="How-To image"
+                class="absolute left-0 top-0 w-full h-full rounded-2xl z-0 object-cover"/>
         </div>
-        <div class="container w-6/12 mx-auto flex flex-col justify-between mt-4">
-            <div class="text-4xl text-center align-text-bottom p-6">
-            <span class="font-bold">
+
+        <div
+            class="flex flex-col justify-end p-8 text-4xl text-center align-text-bottom text-white absolute left-0 bottom-0 w-full h-full z-30">
+            <p class="font-bold">
                 <strong>How-to</strong>
-            </span>
-                <hr/>
-                <span>
+            </p>
+            <hr/>
+            <p class="text-xl">
                 <small>Browse, post, and vote on life-hacks!</small>
-            </span>
-            </div>
+            </p>
+        </div>
 
-            <div class="text-left align-middle mb-4 py-2">
-                <p>
-                <span class="text-xl">
-                    Featured Technologies :
-                </span>
+        <div id="projM-p4"
+             class="tilePara absolute left-0 bottom-0 w-full h-full z-30 opacity-0 px-4 py-2 bg-yellow-50 rounded-2xl">
+            <div class="h-full flex flex-col justify-center modal-container">
+                <div class="w-9/12 mx-auto flex flex-col justify-between">
+                    <div class="text-left align-middle py-2 w-10/12 mx-auto">
+                        <div class="grid grid-cols-3 sm:flex sm:justify-between justify-items-center">
+                            <p class="text-2xl text-center hidden md:block">Featured Technologies :</p>
+                            <img
+                                class="w-8 inline-block mx-2"
+                                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                                alt="React"/>
+                            <img
+                                class="w-6 inline-block mx-2"
+                                src="https://cdn.svgporn.com/logos/redux.svg"
+                                alt="Redux"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/nodejs.svg"
+                                alt="Node"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/bootstrap.svg"
+                                alt="Bootstrap"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/postgresql.svg"
+                                alt="PostGreSQL"/>
+                            <img
+                                class="inline-block w-8 mx-2"
+                                src="https://cdn.svgporn.com/logos/heroku-icon.svg"
+                                alt="Heroku"/>
+                        </div>
+                    </div>
+                </div>
 
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
-                        alt="React"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/redux.svg"
-                        alt="Redux"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/nodejs.svg"
-                        alt="Node"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/bootstrap.svg"
-                        alt="Bootstrap"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/postgresql.svg"
-                        alt="PostGreSQL"/>
-
-                    <img
-                        class="inline-block w-12 mx-2"
-                        src="https://cdn.svgporn.com/logos/heroku-icon.svg"
-                        alt="Heroku"/>
-                </p>
+                <div class="flex justify-center w-auto">
+                    <div class="rounded-md shadow my-2">
+                        <a href="#"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
+                            <p><span class="hidden sm:inline">See the </span>Blog Post</p>
+                        </a>
+                    </div>
+                    <div class="rounded-md shadow my-2 mx-2 sm:mx-8">
+                        <a href="/how_to"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                        </a>
+                    </div>
+                    <div class="inline-flex rounded-md shadow my-2">
+                        <a href="https://github.com/HeftyB/How-To"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
+                            <p><span class="hidden sm:inline">See the </span>Code</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="flex flex-col justify-center w-auto border-l pl-4">
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="#"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
-                    See the Blog Post
-                </a>
-            </div>
-            <div class="rounded-md shadow my-2">
-                <a
-                    href="/how_to"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                    See the Project
-                </a>
-            </div>
-            <div class="inline-flex rounded-md shadow my-2">
-                <a
-                    href="https://github.com/HeftyB/How-To"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
-                    See the code
-                </a>
-            </div>
-        </div>
+
     </div>
+
+    <script>
+        for (let i = 1; i < 5; i++) {
+
+            let p = document.querySelector(`#p${i}`);
+
+            p.addEventListener("mouseenter", e => {
+                document.querySelector(`#projM-p${i}`).classList.remove("animate-blowUpModalTwo")
+                document.querySelector(`#projM-p${i}`).classList.add("animate-blowUpModal")
+            });
+
+            p.addEventListener("mouseleave", e => {
+                document.querySelector(`#projM-p${i}`).classList.remove("animate-blowUpModal")
+                document.querySelector(`#projM-p${i}`).classList.add("animate-blowUpModalTwo")
+            });
+        }
+    </script>
+
 </div>
-
-{{--TODO write blog post for each project--}}
-
-{{--TODO add link for user to be added to the approved google dev list--}}
-
-{{--TODO set up cloudflare dynamic ip update--}}
-{{--TODO make projects button in nav a drop down w/ links to deployed demos--}}
-{{--TODO form validation on contact--}}
-{{--TODO make site responsive--}}
-{{--TODO make delete confirmation on imgs / blog--}}
-{{--TODO make dash-blog-img link to blog--}}
-{{--TODO increase delay of welcome ainmation / animation length--}}

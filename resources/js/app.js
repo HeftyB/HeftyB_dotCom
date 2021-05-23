@@ -144,6 +144,8 @@ $(document).ready(function () {
     //         e.preventDefault();
     //         // window.location.replace(`/blog/post/${element.id}`);
     //     })
+
+
     //     $(`#${element.id}`).hover(e => {
     //         // var buttonId = $(`#${element.id}`).attr("id");
     //         // $(`#${element.id}`).removeClass("out").addClass("active");
