@@ -1,6 +1,7 @@
 # www.HeftyB.com 
 
 > ### A Laravel application locally hosted on a Raspberry Pi LAMP stack.
+> My personal slice of the world wide web featuring a blog, dated portfolio, and hosted demos of other projects
 
 This repo is a continous work in progress — questions, comments, PRs, and issues welcome!
 
