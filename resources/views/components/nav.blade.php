@@ -1,4 +1,4 @@
-<nav class="bg-gray-800 px-3 pt-2 pb-1 h-20">
+<nav class="bg-gray-800 px-3 pt-2 pb-1">
     <div class="w-11/12 mx-auto flex justify-start sm:hidden">
         <div id="mNavIcon" class="border-2 border-white w-12 p-4">
             <hr class="border-2 border-white my-1">
@@ -6,16 +6,10 @@
             <hr class="border-2 border-white my-1">
         </div>
 
-        <script>
-            let mn = document.querySelector("#mNavIcon");
-
-            mn.addEventListener("click", e => {
-                mn.classList.add("animate-spin");
-            })
-        </script>
-
         <div id="mobileNav"
              class="absolute left-0 top-24 -mt-4 bg-gray-800 w-screen h-screen flex flex-col justify-evenly text-lg hidden">
+
+            <hr>
 
             <div
                 class="px-3 pl-3 py-2 rounded-md font-medium text-gray-300 hover:text-white hover:bg-gray-700 text-4xl m-4 text-center">
@@ -88,7 +82,7 @@
 
 
             <div
-                class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 relative"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 relative cursor-pointer"
                 id="navProjectButt">
                 Projects
 
@@ -171,4 +165,21 @@
         </div>
     </div>
 
+
+    <script>
+        let mn = document.querySelector("#mNavIcon");
+        let navProjButt = document.querySelector("#navProjectButt");
+        let mobileMenu = document.querySelector("#mobileNav");
+        let navProj = document.querySelector("#navProjects");
+
+        mn.addEventListener("click", e => {
+            // mn.classList.add("animate-spin");
+            mobileMenu.classList.toggle("hidden");
+        })
+        navProjButt.addEventListener("click", e => {
+            navProj.classList.toggle("hidden");
+        })
+
+
+    </script>
 </nav>

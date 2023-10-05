@@ -11,7 +11,7 @@
             Welcome, I am Andrew Shields a Software Engineer / Web Developer always on the quest to learn new things.
             I have been building & fixing various electronics and computers for 15+ years and I still love working on
             projects and solutions.
-            I have the pleasure of being a Lambda School alumni, prior to professional software development my
+            I have the pleasure of being a Bloom Institute of Technology alumni (formally Lambda School), prior to professional software development my
             background was in the
             lucrative automotive industry. This is my personal piece of the World Wide Web, I created it as a place to
             share my

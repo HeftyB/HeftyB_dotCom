@@ -1,4 +1,4 @@
-<div class="mb-8">
+<div class="mb-8" id="projects">
     <div
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl relative h-52"
         id="p1">
@@ -63,7 +63,7 @@
 
                 <div class="flex justify-center w-auto">
                     <div class="rounded-md shadow my-2">
-                        <a href="#"
+                        <a href="/blog"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
                             <p><span class="hidden sm:inline">See the </span>Blog Post</p>
                         </a>
@@ -73,7 +73,7 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                            <p><span class="hidden sm:inline">See the </span>Demo</p>
                         </a>
                     </div>
                     <div class="inline-flex rounded-md shadow my-2">
@@ -154,19 +154,19 @@
 
                 <div class="flex justify-center w-auto">
                     <div class="rounded-md shadow my-2">
-                        <a href="#"
+                        <a href="/blog"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
                             <p><span class="hidden sm:inline">See the </span>Blog Post</p>
                         </a>
                     </div>
                     <div class="rounded-md shadow my-2 mx-2 sm:mx-8">
-                        <a href="#"
+                        <a href="https://github.com/SuperSupperMicro/iOS"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                            <p><span class="hidden sm:inline">See the </span>iOS repo</p>
                         </a>
                     </div>
                     <div class="inline-flex rounded-md shadow my-2">
-                        <a href="https://github.com/super-supper"
+                        <a href="https://github.com/orgs/SuperSupperMicro/repositories"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600">
@@ -243,7 +243,7 @@
 
                 <div class="flex justify-center w-auto">
                     <div class="rounded-md shadow my-2">
-                        <a href="#"
+                        <a href="/blog"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
                             <p><span class="hidden sm:inline">See the </span>Blog Post</p>
                         </a>
@@ -253,7 +253,7 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                            <p><span class="hidden sm:inline">See the </span>Demo</p>
                         </a>
                     </div>
                     <div class="inline-flex rounded-md shadow my-2">
@@ -334,7 +334,7 @@
 
                 <div class="flex justify-center w-auto">
                     <div class="rounded-md shadow my-2">
-                        <a href="#"
+                        <a href="/blog"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500">
                             <p><span class="hidden sm:inline">See the </span>Blog Post</p>
                         </a>
@@ -344,7 +344,7 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="inline-flex items-center justify-center w-full px-5 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
-                            <p><span class="hidden sm:inline">See the </span>Project</p>
+                            <p><span class="hidden sm:inline">See the </span>Demo</p>
                         </a>
                     </div>
                     <div class="inline-flex rounded-md shadow my-2">
