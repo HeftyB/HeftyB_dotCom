@@ -1,4 +1,5 @@
 <nav class="bg-gray-800 px-3 pt-2 pb-1">
+{{--    Mobile Nav--}}
     <div class="w-11/12 mx-auto flex justify-start sm:hidden">
         <div id="mNavIcon" class="border-2 border-white w-12 p-4">
             <hr class="border-2 border-white my-1">
@@ -73,6 +74,8 @@
 
     </div>
 
+{{--    Desktop Nav--}}
+
     <div class="container mx-auto sm:flex flex-wrap items-end justify-between hidden">
         <div class="mid flex items-end justify-start w-3/12 text-lg">
             <div class="px-3 pl-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">
@@ -114,6 +117,9 @@
 
             <div class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a
                     href="/blog">Blog</a></div>
+
+            <div class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"><a
+                    href="https://docs.google.com/document/d/1zjSv2IzRRZ63d1fgp2QZTWlOOZbI2caSKFw0pQB2H8g/edit?usp=sharing">Resume</a></div>
         </div>
 
         <div

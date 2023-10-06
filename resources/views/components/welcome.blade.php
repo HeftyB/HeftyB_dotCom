@@ -1,4 +1,4 @@
-<div class="container mx-auto flex px-5 lg:py-24 lg:flex-row flex-col items-center bg-gray-500 rounded-2xl">
+<div class="container mx-auto flex px-5 lg:py-24 lg:flex-row flex-col items-center bg-gray-500 rounded-2xl mt-20">
     <div
         class="lg:flex-grow lg:w-8/12 flex flex-col lg:items-start lg:text-left md:mb-16 m-8 md:m-14 md:mb-0 items-center text-center">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 border-black border-b-2 lg:border-r-2 lg:rounded-rb-2xl w-full p-4">
