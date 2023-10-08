@@ -42,6 +42,11 @@
 
             <hr>
 
+            <div class="px-3 py-2 rounded-md font-medium text-gray-300 hover:text-white hover:bg-gray-700 text-4xl m-4 text-center"><a
+                    href="https://docs.google.com/document/d/1zjSv2IzRRZ63d1fgp2QZTWlOOZbI2caSKFw0pQB2H8g/edit?usp=sharing">Resume</a></div>
+
+            <hr>
+
             @if (\Illuminate\Support\Facades\Auth::check())
 
                 <div
