@@ -1,244 +1,31 @@
 <div class="container mx-auto px-4 py-5">
     <div class="flex justify-end mb-4">
-        <div class="w-6/12 flex flex-col justify-center">
+        <div class="w-7/12 flex flex-col justify-center">
             <hr class="border-black">
         </div>
         <h3 class="text-2xl lg:text-4xl font-bold text-gray-800 border-black border-l border-b border-t p-4 rounded-l-2xl">
-            Development Technologies:
+            Skills & Education:
         </h3>
     </div>
 
-    <div class="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+    <div class="lg:flex">
+        <section class="lg:w-9/12 lg:mr-4">
+            <x-skillsvg />
+        </section>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/javascript.svg"
-                alt="JS"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">
-                    JavaScript
-                </div>
-            </div>
-        </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
-                alt="React"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">React</div>
+        <section class="border-black lg:border-l flex flex-col place-content-evenly">
+            <div class="p-4">
+                <p class="font-bold text-2xl pb-4">Bloom Institute of Technology</p>
+                <p class="font-extrabold text-xs text-right"><span class="font-extrabold">•</span> Full stack web development / Computer science<span class="font-normal"> - 2020</span></p>
             </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/redux.svg"
-                alt="Redux"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Redux</div>
+            <hr class="border-black">
+            <div class="p-4">
+                <p class="font-bold text-2xl pb-4">Southern New Hampshire University</p>
+                <p class="font-extrabold text-xs text-right"><span class="font-extrabold">•</span> B.S. Business Administration<span class="font-normal"> - 2019</span></p>
             </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/html-5.svg"
-                alt="HTML5"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">HTML-5</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/css-3.svg"
-                alt="CSS-3"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg lg:text-2xl mb-2">CSS-3</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-3/12 justify-center"
-                src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"
-                alt="Java"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Java</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/spring.svg"
-                alt="Spring Boot"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-xs md:text-sm xl:text-lg mb-2">
-                    Spring-Boot
-                </div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/postgresql.svg"
-                alt="PostGreSQL"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-base xl:text-lg mb-2">
-                    PostGreSQL
-                </div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/nodejs.svg"
-                alt="Node"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Node</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/mongodb.svg"
-                alt="MongoDB"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">MongoDB</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-128.png"
-                alt="Python"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Python</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/flask.svg"
-                alt="Flask"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Flask</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/bootstrap.svg"
-                alt="Bootstrap"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">
-                    Bootstrap
-                </div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/docker-icon.svg"
-                alt="Docker"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Docker</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/linux-tux.svg"
-                alt="Tux"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Linux</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/php.svg"
-                alt="PHP"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">PHP</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/laravel.svg"
-                alt="Laravel"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Laravel</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg"
-                alt="Tailwind CSS"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-base xl:text-lg mb-2">Tailwind-CSS</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-10 justify-center"
-                src="https://cdn.svgporn.com/logos/apache.svg"
-                alt="Apache"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">Apache</div>
-            </div>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-lg flex justify-center items-center bg-indigo-100 h-20">
-            <img
-                class="w-12 justify-center"
-                src="https://cdn.svgporn.com/logos/mysql.svg"
-                alt="MySQL"
-            />
-            <div class="px-6 py-4 hidden sm:inline">
-                <div class="font-extrabold text-sm md:text-lg xl:text-2xl mb-2">MySQL</div>
-            </div>
-        </div>
+        </section>
     </div>
-
     <div class="flex justify-start my-8 ml-4">
         <h3 class="text-2xl lg:text-4xl font-bold text-gray-800 border-black border-r border-b border-t p-4 rounded-r-2xl">
             Project Information:
