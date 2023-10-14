@@ -141,3 +141,17 @@
 #ddpic {
     width: 32px;
 }
+
+
+.photoBox {
+    perspective: 800px;
+}
+
+.activePhoto {
+    /* */
+}
+
+.inactivePhoto {
+    transform: translateX(-100%) rotateY(90deg);
+    display: none;
+}

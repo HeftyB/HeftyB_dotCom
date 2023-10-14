@@ -1,4 +1,5 @@
 <div class="mb-8" id="projects">
+
     <div
         class="container mx-auto bg-yellow-50 px-4 py-2 my-4 flex justify-evenly rounded-2xl border-2 border-black shadow-xl relative h-52"
         id="p1">
@@ -361,7 +362,118 @@
 
     </div>
 
+
+    <div class="border border-black p-6 rounded-2xl max-w-md">
+        <div>
+            <h2 class="text-4xl font-bold text-left whitespace-pre">Set</h2>
+            <p class="text-xl text-right">an iOS card game</p>
+        </div>
+        <hr class="border-black">
+        <div class="flex">
+            <div class="w-full">skills</div>
+            <div class="flex flex-col w-2/6">
+                <button>b1</button>
+                <button>b2</button>
+                <button>b3</button>
+            </div>
+        </div>
+        <div>summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur assumenda beatae commodi cum cumque dolor dolore enim eum, excepturi explicabo fuga incidunt maxime molestias nam nobis officia officiis optio quidem quo ullam voluptas, voluptatem voluptatum! Assumenda aut cumque eveniet exercitationem nobis! Animi autem beatae commodi eligendi odit officia veritatis voluptatem. Adipisci aliquam commodi, consequatur dignissimos, doloribus eius enim fugiat iusto magnam nemo neque optio quas rem tempora ullam. Adipisci architecto at consectetur consequuntur dignissimos dolorum, fugit in, incidunt nesciunt nostrum pariatur saepe, vitae? Ad aspernatur dignissimos dolore id magni, tempora? Accusamus architecto dignissimos, dolore eum exercitationem fugit molestiae perspiciatis quis quisquam tempora. A ad asperiores consectetur consequatur dolor dolore doloribus facere iste iusto maiores minima nobis, qui reprehenderit saepe tempore. Necessitatibus repellat reprehenderit tenetur.</div>
+        {{--img carousel--}}
+        <div class="bg-black photoBox w-full">
+            <div id="imgContainer-set" class="relative">
+                {{--       empty space for JS inerstion        --}}
+            </div>
+            {{--carousel navigation--}}
+            <span id="picForward-set" class="text-4xl text-yellow-500 absolute right-2 top-1/2 align-center -mt-4">></span>
+            <span id="picBackward-set" class="text-4xl text-yellow-500 absolute left-2 top-1/2 align-center -mt-4"><</span>
+
+        </div>
+    </div>
+
     <script>
+
+        // returns an img HTML element
+        let picElement = (url) => {
+            return `<img id="picture2" src="https://heftyb.com/blog/${url}" alt="HeftyB.com image" class="inactivePhoto"/>`
+        }
+
+
+        let imgPaths = {
+            set : [
+                "heftyb/imgs/Vy5QnV5mW9R7B13EQgOBVD9eLzVFJvB3SoRxDJJI.jpg",
+                "heftyb/imgs/2XVLl5JFM7gYA9wf3m27M6Px4aQCBEQoD2hzsI0l.jpg",
+                "heftyb/imgs/Xrxd8GFdCzxdAnjek3uDzjr7mkIOBN9RIbex7LJD.jpg",
+                "heftyb/imgs/JKNwGKGReODEXxuCRKUitGEKwPHxg9WDEs0EpowX.jpg"
+            ],
+        }
+
+        addProjectImages()
+
+
+        function addProjectImages() {
+
+            for ([name, arr] of Object.entries(imgPaths) ) {
+                // generate element for inertion
+                let s =""
+                arr.forEach(url => {s += picElement(url)})
+
+                // grab project's imgContainer
+                let imageContainer = document.getElementById(`imgContainer-${name}`)
+
+                // add img elements
+                imageContainer.innerHTML += s
+
+                // get inserted elements
+                let pics = imageContainer.children
+
+                const len = pics.length
+                let currPic = 0
+
+                // set default photo
+                pics[currPic].classList.remove("inactivePhoto")
+
+
+                // forward navigation
+                document.getElementById(`picForward-${name}`).addEventListener("click", e => {
+                    // get next photo
+                    let next = currPic < len ? (currPic + 1) : 0
+
+                    // start the animation
+                    pics[currPic].classList.add("animate-rollOut", "absolute")
+                    pics[next].classList.add("animate-rollIn")
+                    pics[next].classList.remove("inactivePhoto")
+
+                    // wait until the animation is over and remove previous image
+                    setTimeout(() => {
+                        pics[currPic].classList.add("inactivePhoto")
+                        pics[currPic].classList.remove("animate-rollOut", "absolute")
+
+                        pics[next].classList.remove("animate-rollIn")
+                        currPic = next
+
+                    }, 10000)
+                })
+
+                // backward navigation
+                document.getElementById(`picBackward-${name}`).addEventListener("click", e => {
+                    let next = currPic  == 0 ? len - 1 : currPic - 1
+
+                    pics[currPic].classList.add("animate-rollBackOut", "absolute")
+                    pics[next].classList.add("animate-rollBackIn")
+                    pics[next].classList.remove("inactivePhoto")
+
+                    setTimeout(() => {
+                        pics[currPic].classList.add("inactivePhoto")
+                        pics[currPic].classList.remove("animate-rollBackOut", "absolute")
+
+                        pics[next].classList.remove("animate-rollBackOut")
+                        currPic = next
+                    }, 10000)
+                })
+            }
+        }
+
+
         for (let i = 1; i < 5; i++) {
 
             let p = document.querySelector(`#p${i}`);

@@ -39,6 +39,31 @@ module.exports = {
                     '80%': {transform: 'translateX(60px)'},
                     '100%': {opacity: '1', transform: 'translateX(0px)'}
                 },
+                rollIn: {
+                    '0%': {
+                        transform: 'translateX(-50%) rotateY(90deg)'
+                    },
+                    '60%': {
+                        transform: 'translateX(0)'
+                    },
+                    '100%': {
+                        transform: 'rotateY(0deg)'
+                    }
+                },
+                rollOut: {
+                    '0%': {
+                        transform: 'translateX(0) rotateY(0)'
+                    },
+                    '30%': {
+                        transform: 'translateX(15%) rotateY(-83.75deg)'
+                    },
+                    '35%': {
+                        transform: 'translateX(20%) rotateY(-90deg)'
+                    },
+                    '100%': {
+                        transform: 'translateX(50%) rotateY(-90deg)'
+                    }
+                }
             },
             animation: {
                 shakes: "shakes 0.5s ease-in-out infinite alternate",
@@ -46,9 +71,13 @@ module.exports = {
                 "spin-2": "spin 0.5s ease-in-out forwards",
                 blowUpModal: "blowUpModal 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
                 blowUpModalTwo: "blowUpModalTwo 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
-                "downAndOut": "downAndOut 1.5s ease-in-out forwards",
-                "outAndDown": "downAndOut 1.5s linear backwards",
-                "sideSlide": "translateX 300ms 180ms ease-in-out forwards",
+                downAndOut: "downAndOut 1.5s ease-in-out forwards",
+                outAndDown: "downAndOut 1.5s linear backwards",
+                sideSlide: "translateX 300ms 180ms ease-in-out forwards",
+                rollIn: "rollIn 10s linear forwards",
+                rollOut: "rollOut 10s linear forwards",
+                rollBackIn: "rollOut 10s linear backwards",
+                rollBackOut: "rollIn 10s linear backwards"
             },
             scale: {
                 '-1': '-1'
